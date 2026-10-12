@@ -1,0 +1,1281 @@
+student_id,name,subject,topic,marks_obtained,max_marks,quiz_date
+CS001,Ananya,DBMS,Normalization,7.6,10,2026-08-04
+CS001,Ananya,DBMS,Normalization,7.1,10,2026-09-12
+CS001,Ananya,DBMS,SQL Joins,4.2,10,2026-08-07
+CS001,Ananya,DBMS,SQL Joins,5.6,10,2026-09-02
+CS001,Ananya,DBMS,Transactions,6.8,10,2026-08-08
+CS001,Ananya,DBMS,Transactions,7.0,10,2026-09-03
+CS001,Ananya,DBMS,Indexing,5.7,10,2026-08-19
+CS001,Ananya,DBMS,Indexing,6.5,10,2026-09-04
+CS001,Ananya,OS,Deadlocks,7.2,10,2026-08-19
+CS001,Ananya,OS,Deadlocks,6.1,10,2026-09-02
+CS001,Ananya,OS,CPU Scheduling,5.2,10,2026-08-08
+CS001,Ananya,OS,CPU Scheduling,6.1,10,2026-09-02
+CS001,Ananya,OS,Paging,5.5,10,2026-08-14
+CS001,Ananya,OS,Paging,6.4,10,2026-09-05
+CS001,Ananya,OS,Synchronization,4.8,10,2026-08-18
+CS001,Ananya,OS,Synchronization,6.3,10,2026-09-27
+CS001,Ananya,DSA,Trees,5.8,10,2026-08-19
+CS001,Ananya,DSA,Trees,6.2,10,2026-09-21
+CS001,Ananya,DSA,Graphs,6.1,10,2026-08-23
+CS001,Ananya,DSA,Graphs,6.9,10,2026-09-03
+CS001,Ananya,DSA,Sorting,2.0,10,2026-08-16
+CS001,Ananya,DSA,Sorting,3.3,10,2026-09-22
+CS001,Ananya,DSA,Dynamic Programming,4.4,10,2026-08-15
+CS001,Ananya,DSA,Dynamic Programming,6.2,10,2026-09-19
+CS001,Ananya,CN,Subnetting,3.9,10,2026-08-08
+CS001,Ananya,CN,Subnetting,3.4,10,2026-09-26
+CS001,Ananya,CN,TCP,6.6,10,2026-08-03
+CS001,Ananya,CN,TCP,8.0,10,2026-09-19
+CS001,Ananya,CN,Routing,5.6,10,2026-08-11
+CS001,Ananya,CN,Routing,7.6,10,2026-09-24
+CS001,Ananya,CN,HTTP,4.8,10,2026-08-03
+CS001,Ananya,CN,HTTP,6.9,10,2026-09-04
+CS002,Bhavya,DBMS,Normalization,7.7,10,2026-08-22
+CS002,Bhavya,DBMS,Normalization,7.0,10,2026-09-03
+CS002,Bhavya,DBMS,SQL Joins,6.9,10,2026-08-27
+CS002,Bhavya,DBMS,SQL Joins,6.2,10,2026-09-11
+CS002,Bhavya,DBMS,Transactions,3.6,10,2026-08-16
+CS002,Bhavya,DBMS,Transactions,5.3,10,2026-09-19
+CS002,Bhavya,DBMS,Indexing,6.9,10,2026-08-03
+CS002,Bhavya,DBMS,Indexing,7.1,10,2026-09-09
+CS002,Bhavya,OS,Deadlocks,5.5,10,2026-08-02
+CS002,Bhavya,OS,Deadlocks,7.6,10,2026-09-24
+CS002,Bhavya,OS,CPU Scheduling,6.4,10,2026-08-22
+CS002,Bhavya,OS,CPU Scheduling,6.2,10,2026-09-27
+CS002,Bhavya,OS,Paging,5.5,10,2026-08-22
+CS002,Bhavya,OS,Paging,7.9,10,2026-09-12
+CS002,Bhavya,OS,Synchronization,7.8,10,2026-08-06
+CS002,Bhavya,OS,Synchronization,7.5,10,2026-09-20
+CS002,Bhavya,DSA,Trees,7.0,10,2026-08-25
+CS002,Bhavya,DSA,Trees,7.6,10,2026-09-10
+CS002,Bhavya,DSA,Graphs,7.3,10,2026-08-13
+CS002,Bhavya,DSA,Graphs,7.9,10,2026-09-28
+CS002,Bhavya,DSA,Sorting,3.5,10,2026-08-13
+CS002,Bhavya,DSA,Sorting,4.6,10,2026-09-18
+CS002,Bhavya,DSA,Dynamic Programming,6.7,10,2026-08-14
+CS002,Bhavya,DSA,Dynamic Programming,7.9,10,2026-09-28
+CS002,Bhavya,CN,Subnetting,5.5,10,2026-08-12
+CS002,Bhavya,CN,Subnetting,7.0,10,2026-09-22
+CS002,Bhavya,CN,TCP,8.5,10,2026-08-05
+CS002,Bhavya,CN,TCP,5.9,10,2026-09-03
+CS002,Bhavya,CN,Routing,7.1,10,2026-08-08
+CS002,Bhavya,CN,Routing,8.0,10,2026-09-01
+CS002,Bhavya,CN,HTTP,5.6,10,2026-08-09
+CS002,Bhavya,CN,HTTP,7.5,10,2026-09-10
+CS003,Charitha,DBMS,Normalization,4.3,10,2026-08-28
+CS003,Charitha,DBMS,Normalization,5.5,10,2026-09-17
+CS003,Charitha,DBMS,SQL Joins,5.8,10,2026-08-24
+CS003,Charitha,DBMS,SQL Joins,4.7,10,2026-09-02
+CS003,Charitha,DBMS,Transactions,2.8,10,2026-08-28
+CS003,Charitha,DBMS,Transactions,5.6,10,2026-09-22
+CS003,Charitha,DBMS,Indexing,4.8,10,2026-08-13
+CS003,Charitha,DBMS,Indexing,4.3,10,2026-09-13
+CS003,Charitha,OS,Deadlocks,5.5,10,2026-08-02
+CS003,Charitha,OS,Deadlocks,5.9,10,2026-09-07
+CS003,Charitha,OS,CPU Scheduling,5.1,10,2026-08-06
+CS003,Charitha,OS,CPU Scheduling,5.4,10,2026-09-04
+CS003,Charitha,OS,Paging,4.4,10,2026-08-01
+CS003,Charitha,OS,Paging,5.4,10,2026-09-19
+CS003,Charitha,OS,Synchronization,4.8,10,2026-08-12
+CS003,Charitha,OS,Synchronization,5.5,10,2026-09-20
+CS003,Charitha,DSA,Trees,6.3,10,2026-08-20
+CS003,Charitha,DSA,Trees,5.4,10,2026-09-13
+CS003,Charitha,DSA,Graphs,2.1,10,2026-08-12
+CS003,Charitha,DSA,Graphs,2.9,10,2026-09-20
+CS003,Charitha,DSA,Sorting,4.2,10,2026-08-28
+CS003,Charitha,DSA,Sorting,5.5,10,2026-09-16
+CS003,Charitha,DSA,Dynamic Programming,2.7,10,2026-08-16
+CS003,Charitha,DSA,Dynamic Programming,2.3,10,2026-09-10
+CS003,Charitha,CN,Subnetting,4.9,10,2026-08-11
+CS003,Charitha,CN,Subnetting,5.3,10,2026-09-24
+CS003,Charitha,CN,TCP,4.4,10,2026-08-06
+CS003,Charitha,CN,TCP,6.8,10,2026-09-17
+CS003,Charitha,CN,Routing,3.9,10,2026-08-17
+CS003,Charitha,CN,Routing,2.6,10,2026-09-12
+CS003,Charitha,CN,HTTP,5.2,10,2026-08-01
+CS003,Charitha,CN,HTTP,6.0,10,2026-09-25
+CS004,Divya,DBMS,Normalization,4.9,10,2026-08-12
+CS004,Divya,DBMS,Normalization,7.2,10,2026-09-25
+CS004,Divya,DBMS,SQL Joins,7.1,10,2026-08-17
+CS004,Divya,DBMS,SQL Joins,8.6,10,2026-09-11
+CS004,Divya,DBMS,Transactions,3.3,10,2026-08-26
+CS004,Divya,DBMS,Transactions,3.7,10,2026-09-25
+CS004,Divya,DBMS,Indexing,7.9,10,2026-08-27
+CS004,Divya,DBMS,Indexing,6.2,10,2026-09-13
+CS004,Divya,OS,Deadlocks,4.0,10,2026-08-17
+CS004,Divya,OS,Deadlocks,4.0,10,2026-09-16
+CS004,Divya,OS,CPU Scheduling,6.7,10,2026-08-01
+CS004,Divya,OS,CPU Scheduling,7.6,10,2026-09-26
+CS004,Divya,OS,Paging,6.7,10,2026-08-23
+CS004,Divya,OS,Paging,8.2,10,2026-09-20
+CS004,Divya,OS,Synchronization,7.8,10,2026-08-24
+CS004,Divya,OS,Synchronization,7.2,10,2026-09-12
+CS004,Divya,DSA,Trees,7.7,10,2026-08-08
+CS004,Divya,DSA,Trees,7.2,10,2026-09-04
+CS004,Divya,DSA,Graphs,7.0,10,2026-08-07
+CS004,Divya,DSA,Graphs,8.1,10,2026-09-16
+CS004,Divya,DSA,Sorting,5.5,10,2026-08-27
+CS004,Divya,DSA,Sorting,6.1,10,2026-09-01
+CS004,Divya,DSA,Dynamic Programming,2.8,10,2026-08-26
+CS004,Divya,DSA,Dynamic Programming,4.8,10,2026-09-21
+CS004,Divya,CN,Subnetting,8.0,10,2026-08-13
+CS004,Divya,CN,Subnetting,8.1,10,2026-09-26
+CS004,Divya,CN,TCP,3.9,10,2026-08-06
+CS004,Divya,CN,TCP,4.1,10,2026-09-14
+CS004,Divya,CN,Routing,7.1,10,2026-08-26
+CS004,Divya,CN,Routing,6.7,10,2026-09-24
+CS004,Divya,CN,HTTP,6.2,10,2026-08-03
+CS004,Divya,CN,HTTP,8.0,10,2026-09-24
+CS005,Eesha,DBMS,Normalization,1.6,10,2026-08-21
+CS005,Eesha,DBMS,Normalization,2.5,10,2026-09-05
+CS005,Eesha,DBMS,SQL Joins,4.3,10,2026-08-16
+CS005,Eesha,DBMS,SQL Joins,5.0,10,2026-09-22
+CS005,Eesha,DBMS,Transactions,2.9,10,2026-08-18
+CS005,Eesha,DBMS,Transactions,2.8,10,2026-09-05
+CS005,Eesha,DBMS,Indexing,6.8,10,2026-08-24
+CS005,Eesha,DBMS,Indexing,6.0,10,2026-09-21
+CS005,Eesha,OS,Deadlocks,6.4,10,2026-08-05
+CS005,Eesha,OS,Deadlocks,6.7,10,2026-09-14
+CS005,Eesha,OS,CPU Scheduling,5.8,10,2026-08-28
+CS005,Eesha,OS,CPU Scheduling,5.8,10,2026-09-07
+CS005,Eesha,OS,Paging,5.8,10,2026-08-17
+CS005,Eesha,OS,Paging,5.9,10,2026-09-08
+CS005,Eesha,OS,Synchronization,5.3,10,2026-08-18
+CS005,Eesha,OS,Synchronization,5.0,10,2026-09-14
+CS005,Eesha,DSA,Trees,5.4,10,2026-08-24
+CS005,Eesha,DSA,Trees,5.5,10,2026-09-12
+CS005,Eesha,DSA,Graphs,6.3,10,2026-08-27
+CS005,Eesha,DSA,Graphs,5.0,10,2026-09-17
+CS005,Eesha,DSA,Sorting,3.4,10,2026-08-17
+CS005,Eesha,DSA,Sorting,6.8,10,2026-09-05
+CS005,Eesha,DSA,Dynamic Programming,4.1,10,2026-08-01
+CS005,Eesha,DSA,Dynamic Programming,5.6,10,2026-09-28
+CS005,Eesha,CN,Subnetting,4.7,10,2026-08-01
+CS005,Eesha,CN,Subnetting,6.0,10,2026-09-25
+CS005,Eesha,CN,TCP,5.4,10,2026-08-16
+CS005,Eesha,CN,TCP,5.3,10,2026-09-20
+CS005,Eesha,CN,Routing,5.0,10,2026-08-11
+CS005,Eesha,CN,Routing,4.7,10,2026-09-22
+CS005,Eesha,CN,HTTP,4.1,10,2026-08-26
+CS005,Eesha,CN,HTTP,5.7,10,2026-09-25
+CS006,Farah,DBMS,Normalization,5.4,10,2026-08-15
+CS006,Farah,DBMS,Normalization,5.7,10,2026-09-18
+CS006,Farah,DBMS,SQL Joins,4.1,10,2026-08-03
+CS006,Farah,DBMS,SQL Joins,3.1,10,2026-09-15
+CS006,Farah,DBMS,Transactions,3.9,10,2026-08-20
+CS006,Farah,DBMS,Transactions,7.7,10,2026-09-17
+CS006,Farah,DBMS,Indexing,2.4,10,2026-08-17
+CS006,Farah,DBMS,Indexing,3.5,10,2026-09-18
+CS006,Farah,OS,Deadlocks,2.6,10,2026-08-08
+CS006,Farah,OS,Deadlocks,1.8,10,2026-09-23
+CS006,Farah,OS,CPU Scheduling,3.2,10,2026-08-09
+CS006,Farah,OS,CPU Scheduling,5.3,10,2026-09-18
+CS006,Farah,OS,Paging,5.5,10,2026-08-15
+CS006,Farah,OS,Paging,5.2,10,2026-09-05
+CS006,Farah,OS,Synchronization,4.2,10,2026-08-11
+CS006,Farah,OS,Synchronization,6.0,10,2026-09-03
+CS006,Farah,DSA,Trees,4.5,10,2026-08-07
+CS006,Farah,DSA,Trees,4.7,10,2026-09-22
+CS006,Farah,DSA,Graphs,4.8,10,2026-08-25
+CS006,Farah,DSA,Graphs,6.0,10,2026-09-05
+CS006,Farah,DSA,Sorting,6.2,10,2026-08-12
+CS006,Farah,DSA,Sorting,5.1,10,2026-09-05
+CS006,Farah,DSA,Dynamic Programming,5.0,10,2026-08-15
+CS006,Farah,DSA,Dynamic Programming,6.1,10,2026-09-08
+CS006,Farah,CN,Subnetting,5.0,10,2026-08-16
+CS006,Farah,CN,Subnetting,5.2,10,2026-09-06
+CS006,Farah,CN,TCP,6.7,10,2026-08-06
+CS006,Farah,CN,TCP,5.5,10,2026-09-23
+CS006,Farah,CN,Routing,1.2,10,2026-08-11
+CS006,Farah,CN,Routing,3.2,10,2026-09-14
+CS006,Farah,CN,HTTP,5.2,10,2026-08-24
+CS006,Farah,CN,HTTP,6.3,10,2026-09-12
+CS007,Gayathri,DBMS,Normalization,1.0,10,2026-08-10
+CS007,Gayathri,DBMS,Normalization,3.1,10,2026-09-17
+CS007,Gayathri,DBMS,SQL Joins,5.0,10,2026-08-26
+CS007,Gayathri,DBMS,SQL Joins,5.1,10,2026-09-08
+CS007,Gayathri,DBMS,Transactions,5.0,10,2026-08-09
+CS007,Gayathri,DBMS,Transactions,5.1,10,2026-09-09
+CS007,Gayathri,DBMS,Indexing,6.1,10,2026-08-09
+CS007,Gayathri,DBMS,Indexing,5.6,10,2026-09-25
+CS007,Gayathri,OS,Deadlocks,5.2,10,2026-08-22
+CS007,Gayathri,OS,Deadlocks,5.9,10,2026-09-27
+CS007,Gayathri,OS,CPU Scheduling,5.5,10,2026-08-18
+CS007,Gayathri,OS,CPU Scheduling,4.9,10,2026-09-17
+CS007,Gayathri,OS,Paging,3.3,10,2026-08-03
+CS007,Gayathri,OS,Paging,4.6,10,2026-09-09
+CS007,Gayathri,OS,Synchronization,3.1,10,2026-08-14
+CS007,Gayathri,OS,Synchronization,2.9,10,2026-09-03
+CS007,Gayathri,DSA,Trees,4.6,10,2026-08-03
+CS007,Gayathri,DSA,Trees,5.4,10,2026-09-26
+CS007,Gayathri,DSA,Graphs,4.5,10,2026-08-08
+CS007,Gayathri,DSA,Graphs,6.4,10,2026-09-03
+CS007,Gayathri,DSA,Sorting,4.5,10,2026-08-01
+CS007,Gayathri,DSA,Sorting,5.6,10,2026-09-11
+CS007,Gayathri,DSA,Dynamic Programming,2.7,10,2026-08-09
+CS007,Gayathri,DSA,Dynamic Programming,2.4,10,2026-09-20
+CS007,Gayathri,CN,Subnetting,5.3,10,2026-08-08
+CS007,Gayathri,CN,Subnetting,6.0,10,2026-09-04
+CS007,Gayathri,CN,TCP,5.3,10,2026-08-06
+CS007,Gayathri,CN,TCP,5.1,10,2026-09-07
+CS007,Gayathri,CN,Routing,2.9,10,2026-08-17
+CS007,Gayathri,CN,Routing,1.9,10,2026-09-25
+CS007,Gayathri,CN,HTTP,4.9,10,2026-08-22
+CS007,Gayathri,CN,HTTP,6.1,10,2026-09-06
+CS008,Harini,DBMS,Normalization,4.4,10,2026-08-18
+CS008,Harini,DBMS,Normalization,3.7,10,2026-09-07
+CS008,Harini,DBMS,SQL Joins,5.0,10,2026-08-15
+CS008,Harini,DBMS,SQL Joins,6.3,10,2026-09-04
+CS008,Harini,DBMS,Transactions,5.0,10,2026-08-22
+CS008,Harini,DBMS,Transactions,5.2,10,2026-09-16
+CS008,Harini,DBMS,Indexing,3.9,10,2026-08-17
+CS008,Harini,DBMS,Indexing,5.8,10,2026-09-10
+CS008,Harini,OS,Deadlocks,4.7,10,2026-08-11
+CS008,Harini,OS,Deadlocks,4.0,10,2026-09-07
+CS008,Harini,OS,CPU Scheduling,6.4,10,2026-08-21
+CS008,Harini,OS,CPU Scheduling,5.1,10,2026-09-05
+CS008,Harini,OS,Paging,5.0,10,2026-08-02
+CS008,Harini,OS,Paging,6.8,10,2026-09-27
+CS008,Harini,OS,Synchronization,6.0,10,2026-08-24
+CS008,Harini,OS,Synchronization,6.6,10,2026-09-09
+CS008,Harini,DSA,Trees,2.6,10,2026-08-22
+CS008,Harini,DSA,Trees,3.6,10,2026-09-27
+CS008,Harini,DSA,Graphs,4.9,10,2026-08-10
+CS008,Harini,DSA,Graphs,7.0,10,2026-09-20
+CS008,Harini,DSA,Sorting,5.8,10,2026-08-15
+CS008,Harini,DSA,Sorting,7.1,10,2026-09-06
+CS008,Harini,DSA,Dynamic Programming,6.3,10,2026-08-09
+CS008,Harini,DSA,Dynamic Programming,7.1,10,2026-09-12
+CS008,Harini,CN,Subnetting,8.1,10,2026-08-18
+CS008,Harini,CN,Subnetting,5.7,10,2026-09-11
+CS008,Harini,CN,TCP,5.8,10,2026-08-10
+CS008,Harini,CN,TCP,8.7,10,2026-09-07
+CS008,Harini,CN,Routing,5.7,10,2026-08-13
+CS008,Harini,CN,Routing,6.3,10,2026-09-03
+CS008,Harini,CN,HTTP,4.7,10,2026-08-07
+CS008,Harini,CN,HTTP,6.5,10,2026-09-08
+CS009,Ishita,DBMS,Normalization,7.0,10,2026-08-19
+CS009,Ishita,DBMS,Normalization,6.9,10,2026-09-02
+CS009,Ishita,DBMS,SQL Joins,6.2,10,2026-08-21
+CS009,Ishita,DBMS,SQL Joins,7.8,10,2026-09-08
+CS009,Ishita,DBMS,Transactions,5.9,10,2026-08-28
+CS009,Ishita,DBMS,Transactions,5.7,10,2026-09-25
+CS009,Ishita,DBMS,Indexing,7.8,10,2026-08-26
+CS009,Ishita,DBMS,Indexing,8.9,10,2026-09-20
+CS009,Ishita,OS,Deadlocks,3.4,10,2026-08-16
+CS009,Ishita,OS,Deadlocks,5.1,10,2026-09-05
+CS009,Ishita,OS,CPU Scheduling,6.5,10,2026-08-05
+CS009,Ishita,OS,CPU Scheduling,8.6,10,2026-09-02
+CS009,Ishita,OS,Paging,7.4,10,2026-08-17
+CS009,Ishita,OS,Paging,6.1,10,2026-09-21
+CS009,Ishita,OS,Synchronization,5.5,10,2026-08-17
+CS009,Ishita,OS,Synchronization,8.0,10,2026-09-05
+CS009,Ishita,DSA,Trees,8.0,10,2026-08-19
+CS009,Ishita,DSA,Trees,6.6,10,2026-09-27
+CS009,Ishita,DSA,Graphs,6.8,10,2026-08-22
+CS009,Ishita,DSA,Graphs,7.2,10,2026-09-19
+CS009,Ishita,DSA,Sorting,7.2,10,2026-08-23
+CS009,Ishita,DSA,Sorting,6.0,10,2026-09-21
+CS009,Ishita,DSA,Dynamic Programming,6.8,10,2026-08-05
+CS009,Ishita,DSA,Dynamic Programming,7.6,10,2026-09-21
+CS009,Ishita,CN,Subnetting,6.5,10,2026-08-27
+CS009,Ishita,CN,Subnetting,7.7,10,2026-09-15
+CS009,Ishita,CN,TCP,5.6,10,2026-08-21
+CS009,Ishita,CN,TCP,6.9,10,2026-09-18
+CS009,Ishita,CN,Routing,6.3,10,2026-08-01
+CS009,Ishita,CN,Routing,6.4,10,2026-09-15
+CS009,Ishita,CN,HTTP,7.2,10,2026-08-17
+CS009,Ishita,CN,HTTP,5.9,10,2026-09-18
+CS010,Jahnavi,DBMS,Normalization,4.9,10,2026-08-09
+CS010,Jahnavi,DBMS,Normalization,5.9,10,2026-09-08
+CS010,Jahnavi,DBMS,SQL Joins,4.8,10,2026-08-24
+CS010,Jahnavi,DBMS,SQL Joins,4.9,10,2026-09-21
+CS010,Jahnavi,DBMS,Transactions,3.2,10,2026-08-13
+CS010,Jahnavi,DBMS,Transactions,2.6,10,2026-09-03
+CS010,Jahnavi,DBMS,Indexing,3.6,10,2026-08-25
+CS010,Jahnavi,DBMS,Indexing,5.7,10,2026-09-02
+CS010,Jahnavi,OS,Deadlocks,4.0,10,2026-08-03
+CS010,Jahnavi,OS,Deadlocks,4.6,10,2026-09-20
+CS010,Jahnavi,OS,CPU Scheduling,5.3,10,2026-08-24
+CS010,Jahnavi,OS,CPU Scheduling,6.1,10,2026-09-23
+CS010,Jahnavi,OS,Paging,4.5,10,2026-08-01
+CS010,Jahnavi,OS,Paging,6.6,10,2026-09-16
+CS010,Jahnavi,OS,Synchronization,2.8,10,2026-08-22
+CS010,Jahnavi,OS,Synchronization,3.0,10,2026-09-04
+CS010,Jahnavi,DSA,Trees,4.4,10,2026-08-10
+CS010,Jahnavi,DSA,Trees,4.3,10,2026-09-23
+CS010,Jahnavi,DSA,Graphs,3.9,10,2026-08-15
+CS010,Jahnavi,DSA,Graphs,5.4,10,2026-09-25
+CS010,Jahnavi,DSA,Sorting,6.3,10,2026-08-07
+CS010,Jahnavi,DSA,Sorting,6.8,10,2026-09-10
+CS010,Jahnavi,DSA,Dynamic Programming,4.2,10,2026-08-01
+CS010,Jahnavi,DSA,Dynamic Programming,2.4,10,2026-09-10
+CS010,Jahnavi,CN,Subnetting,3.3,10,2026-08-15
+CS010,Jahnavi,CN,Subnetting,5.9,10,2026-09-09
+CS010,Jahnavi,CN,TCP,3.4,10,2026-08-07
+CS010,Jahnavi,CN,TCP,6.8,10,2026-09-03
+CS010,Jahnavi,CN,Routing,1.7,10,2026-08-17
+CS010,Jahnavi,CN,Routing,2.5,10,2026-09-09
+CS010,Jahnavi,CN,HTTP,5.4,10,2026-08-27
+CS010,Jahnavi,CN,HTTP,5.4,10,2026-09-21
+CS011,Keerthi,DBMS,Normalization,5.0,10,2026-08-13
+CS011,Keerthi,DBMS,Normalization,7.4,10,2026-09-01
+CS011,Keerthi,DBMS,SQL Joins,8.0,10,2026-08-22
+CS011,Keerthi,DBMS,SQL Joins,9.2,10,2026-09-15
+CS011,Keerthi,DBMS,Transactions,5.6,10,2026-08-14
+CS011,Keerthi,DBMS,Transactions,8.2,10,2026-09-12
+CS011,Keerthi,DBMS,Indexing,3.7,10,2026-08-11
+CS011,Keerthi,DBMS,Indexing,4.9,10,2026-09-01
+CS011,Keerthi,OS,Deadlocks,6.4,10,2026-08-13
+CS011,Keerthi,OS,Deadlocks,8.1,10,2026-09-04
+CS011,Keerthi,OS,CPU Scheduling,7.3,10,2026-08-01
+CS011,Keerthi,OS,CPU Scheduling,7.2,10,2026-09-24
+CS011,Keerthi,OS,Paging,6.6,10,2026-08-13
+CS011,Keerthi,OS,Paging,8.2,10,2026-09-13
+CS011,Keerthi,OS,Synchronization,8.0,10,2026-08-12
+CS011,Keerthi,OS,Synchronization,7.4,10,2026-09-14
+CS011,Keerthi,DSA,Trees,6.9,10,2026-08-09
+CS011,Keerthi,DSA,Trees,5.6,10,2026-09-04
+CS011,Keerthi,DSA,Graphs,8.0,10,2026-08-21
+CS011,Keerthi,DSA,Graphs,7.8,10,2026-09-05
+CS011,Keerthi,DSA,Sorting,6.8,10,2026-08-17
+CS011,Keerthi,DSA,Sorting,8.1,10,2026-09-11
+CS011,Keerthi,DSA,Dynamic Programming,4.3,10,2026-08-14
+CS011,Keerthi,DSA,Dynamic Programming,5.4,10,2026-09-01
+CS011,Keerthi,CN,Subnetting,7.3,10,2026-08-18
+CS011,Keerthi,CN,Subnetting,6.2,10,2026-09-18
+CS011,Keerthi,CN,TCP,6.9,10,2026-08-24
+CS011,Keerthi,CN,TCP,7.7,10,2026-09-14
+CS011,Keerthi,CN,Routing,5.4,10,2026-08-21
+CS011,Keerthi,CN,Routing,7.8,10,2026-09-28
+CS011,Keerthi,CN,HTTP,6.7,10,2026-08-18
+CS011,Keerthi,CN,HTTP,7.7,10,2026-09-05
+CS012,Lasya,DBMS,Normalization,5.2,10,2026-08-21
+CS012,Lasya,DBMS,Normalization,7.3,10,2026-09-09
+CS012,Lasya,DBMS,SQL Joins,4.7,10,2026-08-16
+CS012,Lasya,DBMS,SQL Joins,6.2,10,2026-09-18
+CS012,Lasya,DBMS,Transactions,5.0,10,2026-08-21
+CS012,Lasya,DBMS,Transactions,5.5,10,2026-09-06
+CS012,Lasya,DBMS,Indexing,6.2,10,2026-08-26
+CS012,Lasya,DBMS,Indexing,6.4,10,2026-09-16
+CS012,Lasya,OS,Deadlocks,1.5,10,2026-08-11
+CS012,Lasya,OS,Deadlocks,2.8,10,2026-09-25
+CS012,Lasya,OS,CPU Scheduling,4.8,10,2026-08-07
+CS012,Lasya,OS,CPU Scheduling,6.0,10,2026-09-08
+CS012,Lasya,OS,Paging,6.0,10,2026-08-03
+CS012,Lasya,OS,Paging,6.3,10,2026-09-11
+CS012,Lasya,OS,Synchronization,5.3,10,2026-08-19
+CS012,Lasya,OS,Synchronization,6.6,10,2026-09-07
+CS012,Lasya,DSA,Trees,6.4,10,2026-08-14
+CS012,Lasya,DSA,Trees,4.9,10,2026-09-13
+CS012,Lasya,DSA,Graphs,4.3,10,2026-08-13
+CS012,Lasya,DSA,Graphs,6.4,10,2026-09-09
+CS012,Lasya,DSA,Sorting,2.3,10,2026-08-09
+CS012,Lasya,DSA,Sorting,3.3,10,2026-09-19
+CS012,Lasya,DSA,Dynamic Programming,5.7,10,2026-08-17
+CS012,Lasya,DSA,Dynamic Programming,5.8,10,2026-09-17
+CS012,Lasya,CN,Subnetting,4.0,10,2026-08-07
+CS012,Lasya,CN,Subnetting,4.6,10,2026-09-03
+CS012,Lasya,CN,TCP,5.2,10,2026-08-13
+CS012,Lasya,CN,TCP,6.5,10,2026-09-21
+CS012,Lasya,CN,Routing,0.5,10,2026-08-28
+CS012,Lasya,CN,Routing,3.8,10,2026-09-27
+CS012,Lasya,CN,HTTP,5.4,10,2026-08-02
+CS012,Lasya,CN,HTTP,5.7,10,2026-09-14
+CS013,Meghana,DBMS,Normalization,3.3,10,2026-08-27
+CS013,Meghana,DBMS,Normalization,6.8,10,2026-09-17
+CS013,Meghana,DBMS,SQL Joins,6.4,10,2026-08-08
+CS013,Meghana,DBMS,SQL Joins,3.6,10,2026-09-26
+CS013,Meghana,DBMS,Transactions,8.1,10,2026-08-17
+CS013,Meghana,DBMS,Transactions,8.6,10,2026-09-22
+CS013,Meghana,DBMS,Indexing,9.0,10,2026-08-23
+CS013,Meghana,DBMS,Indexing,9.4,10,2026-09-21
+CS013,Meghana,OS,Deadlocks,8.8,10,2026-08-03
+CS013,Meghana,OS,Deadlocks,6.7,10,2026-09-18
+CS013,Meghana,OS,CPU Scheduling,7.7,10,2026-08-05
+CS013,Meghana,OS,CPU Scheduling,8.2,10,2026-09-08
+CS013,Meghana,OS,Paging,7.5,10,2026-08-23
+CS013,Meghana,OS,Paging,8.2,10,2026-09-10
+CS013,Meghana,OS,Synchronization,8.9,10,2026-08-17
+CS013,Meghana,OS,Synchronization,8.0,10,2026-09-21
+CS013,Meghana,DSA,Trees,6.3,10,2026-08-04
+CS013,Meghana,DSA,Trees,8.9,10,2026-09-03
+CS013,Meghana,DSA,Graphs,7.0,10,2026-08-07
+CS013,Meghana,DSA,Graphs,10.0,10,2026-09-13
+CS013,Meghana,DSA,Sorting,7.6,10,2026-08-01
+CS013,Meghana,DSA,Sorting,9.9,10,2026-09-01
+CS013,Meghana,DSA,Dynamic Programming,4.8,10,2026-08-09
+CS013,Meghana,DSA,Dynamic Programming,7.6,10,2026-09-11
+CS013,Meghana,CN,Subnetting,6.5,10,2026-08-16
+CS013,Meghana,CN,Subnetting,6.8,10,2026-09-17
+CS013,Meghana,CN,TCP,7.8,10,2026-08-14
+CS013,Meghana,CN,TCP,9.0,10,2026-09-23
+CS013,Meghana,CN,Routing,7.5,10,2026-08-07
+CS013,Meghana,CN,Routing,8.0,10,2026-09-16
+CS013,Meghana,CN,HTTP,5.9,10,2026-08-03
+CS013,Meghana,CN,HTTP,4.6,10,2026-09-09
+CS014,Nikitha,DBMS,Normalization,6.3,10,2026-08-14
+CS014,Nikitha,DBMS,Normalization,6.3,10,2026-09-12
+CS014,Nikitha,DBMS,SQL Joins,5.3,10,2026-08-26
+CS014,Nikitha,DBMS,SQL Joins,5.6,10,2026-09-10
+CS014,Nikitha,DBMS,Transactions,5.5,10,2026-08-07
+CS014,Nikitha,DBMS,Transactions,5.1,10,2026-09-16
+CS014,Nikitha,DBMS,Indexing,3.5,10,2026-08-27
+CS014,Nikitha,DBMS,Indexing,3.2,10,2026-09-07
+CS014,Nikitha,OS,Deadlocks,5.6,10,2026-08-25
+CS014,Nikitha,OS,Deadlocks,6.8,10,2026-09-10
+CS014,Nikitha,OS,CPU Scheduling,6.5,10,2026-08-20
+CS014,Nikitha,OS,CPU Scheduling,6.9,10,2026-09-06
+CS014,Nikitha,OS,Paging,6.4,10,2026-08-22
+CS014,Nikitha,OS,Paging,5.5,10,2026-09-02
+CS014,Nikitha,OS,Synchronization,3.2,10,2026-08-13
+CS014,Nikitha,OS,Synchronization,3.2,10,2026-09-02
+CS014,Nikitha,DSA,Trees,6.1,10,2026-08-05
+CS014,Nikitha,DSA,Trees,8.5,10,2026-09-14
+CS014,Nikitha,DSA,Graphs,5.8,10,2026-08-13
+CS014,Nikitha,DSA,Graphs,6.2,10,2026-09-15
+CS014,Nikitha,DSA,Sorting,7.0,10,2026-08-24
+CS014,Nikitha,DSA,Sorting,5.0,10,2026-09-04
+CS014,Nikitha,DSA,Dynamic Programming,4.8,10,2026-08-11
+CS014,Nikitha,DSA,Dynamic Programming,3.3,10,2026-09-07
+CS014,Nikitha,CN,Subnetting,6.4,10,2026-08-24
+CS014,Nikitha,CN,Subnetting,8.1,10,2026-09-15
+CS014,Nikitha,CN,TCP,6.8,10,2026-08-13
+CS014,Nikitha,CN,TCP,6.4,10,2026-09-27
+CS014,Nikitha,CN,Routing,5.0,10,2026-08-06
+CS014,Nikitha,CN,Routing,6.7,10,2026-09-04
+CS014,Nikitha,CN,HTTP,6.3,10,2026-08-12
+CS014,Nikitha,CN,HTTP,6.1,10,2026-09-14
+CS015,Om,DBMS,Normalization,7.8,10,2026-08-27
+CS015,Om,DBMS,Normalization,10.0,10,2026-09-26
+CS015,Om,DBMS,SQL Joins,8.5,10,2026-08-16
+CS015,Om,DBMS,SQL Joins,9.5,10,2026-09-07
+CS015,Om,DBMS,Transactions,7.4,10,2026-08-07
+CS015,Om,DBMS,Transactions,10.0,10,2026-09-11
+CS015,Om,DBMS,Indexing,7.5,10,2026-08-01
+CS015,Om,DBMS,Indexing,10.0,10,2026-09-21
+CS015,Om,OS,Deadlocks,7.4,10,2026-08-25
+CS015,Om,OS,Deadlocks,10.0,10,2026-09-13
+CS015,Om,OS,CPU Scheduling,9.0,10,2026-08-03
+CS015,Om,OS,CPU Scheduling,9.5,10,2026-09-26
+CS015,Om,OS,Paging,6.6,10,2026-08-24
+CS015,Om,OS,Paging,6.3,10,2026-09-03
+CS015,Om,OS,Synchronization,9.5,10,2026-08-09
+CS015,Om,OS,Synchronization,8.9,10,2026-09-11
+CS015,Om,DSA,Trees,10.0,10,2026-08-09
+CS015,Om,DSA,Trees,9.1,10,2026-09-24
+CS015,Om,DSA,Graphs,8.6,10,2026-08-09
+CS015,Om,DSA,Graphs,8.6,10,2026-09-10
+CS015,Om,DSA,Sorting,10.0,10,2026-08-26
+CS015,Om,DSA,Sorting,9.4,10,2026-09-21
+CS015,Om,DSA,Dynamic Programming,9.1,10,2026-08-27
+CS015,Om,DSA,Dynamic Programming,9.3,10,2026-09-08
+CS015,Om,CN,Subnetting,9.9,10,2026-08-15
+CS015,Om,CN,Subnetting,10.0,10,2026-09-25
+CS015,Om,CN,TCP,8.3,10,2026-08-14
+CS015,Om,CN,TCP,9.8,10,2026-09-27
+CS015,Om,CN,Routing,6.7,10,2026-08-06
+CS015,Om,CN,Routing,9.5,10,2026-09-01
+CS015,Om,CN,HTTP,6.5,10,2026-08-27
+CS015,Om,CN,HTTP,5.2,10,2026-09-23
+CS016,Pranavi,DBMS,Normalization,6.4,10,2026-08-20
+CS016,Pranavi,DBMS,Normalization,9.0,10,2026-09-03
+CS016,Pranavi,DBMS,SQL Joins,7.1,10,2026-08-06
+CS016,Pranavi,DBMS,SQL Joins,8.5,10,2026-09-08
+CS016,Pranavi,DBMS,Transactions,6.9,10,2026-08-16
+CS016,Pranavi,DBMS,Transactions,9.3,10,2026-09-18
+CS016,Pranavi,DBMS,Indexing,7.5,10,2026-08-14
+CS016,Pranavi,DBMS,Indexing,8.4,10,2026-09-04
+CS016,Pranavi,OS,Deadlocks,8.7,10,2026-08-03
+CS016,Pranavi,OS,Deadlocks,8.5,10,2026-09-07
+CS016,Pranavi,OS,CPU Scheduling,6.0,10,2026-08-23
+CS016,Pranavi,OS,CPU Scheduling,6.4,10,2026-09-15
+CS016,Pranavi,OS,Paging,8.2,10,2026-08-15
+CS016,Pranavi,OS,Paging,9.0,10,2026-09-20
+CS016,Pranavi,OS,Synchronization,5.7,10,2026-08-18
+CS016,Pranavi,OS,Synchronization,5.4,10,2026-09-28
+CS016,Pranavi,DSA,Trees,8.2,10,2026-08-25
+CS016,Pranavi,DSA,Trees,7.1,10,2026-09-27
+CS016,Pranavi,DSA,Graphs,7.8,10,2026-08-09
+CS016,Pranavi,DSA,Graphs,9.3,10,2026-09-12
+CS016,Pranavi,DSA,Sorting,8.0,10,2026-08-15
+CS016,Pranavi,DSA,Sorting,9.3,10,2026-09-08
+CS016,Pranavi,DSA,Dynamic Programming,8.2,10,2026-08-10
+CS016,Pranavi,DSA,Dynamic Programming,9.2,10,2026-09-19
+CS016,Pranavi,CN,Subnetting,8.1,10,2026-08-09
+CS016,Pranavi,CN,Subnetting,8.9,10,2026-09-08
+CS016,Pranavi,CN,TCP,4.5,10,2026-08-26
+CS016,Pranavi,CN,TCP,5.7,10,2026-09-04
+CS016,Pranavi,CN,Routing,3.6,10,2026-08-04
+CS016,Pranavi,CN,Routing,3.5,10,2026-09-01
+CS016,Pranavi,CN,HTTP,6.3,10,2026-08-27
+CS016,Pranavi,CN,HTTP,8.8,10,2026-09-15
+CS017,Qureshi,DBMS,Normalization,9.0,10,2026-08-27
+CS017,Qureshi,DBMS,Normalization,9.6,10,2026-09-19
+CS017,Qureshi,DBMS,SQL Joins,8.7,10,2026-08-17
+CS017,Qureshi,DBMS,SQL Joins,9.5,10,2026-09-28
+CS017,Qureshi,DBMS,Transactions,9.2,10,2026-08-25
+CS017,Qureshi,DBMS,Transactions,10.0,10,2026-09-25
+CS017,Qureshi,DBMS,Indexing,5.8,10,2026-08-21
+CS017,Qureshi,DBMS,Indexing,6.3,10,2026-09-20
+CS017,Qureshi,OS,Deadlocks,8.4,10,2026-08-02
+CS017,Qureshi,OS,Deadlocks,8.4,10,2026-09-12
+CS017,Qureshi,OS,CPU Scheduling,8.5,10,2026-08-09
+CS017,Qureshi,OS,CPU Scheduling,9.4,10,2026-09-02
+CS017,Qureshi,OS,Paging,7.6,10,2026-08-07
+CS017,Qureshi,OS,Paging,8.5,10,2026-09-27
+CS017,Qureshi,OS,Synchronization,9.4,10,2026-08-22
+CS017,Qureshi,OS,Synchronization,9.3,10,2026-09-12
+CS017,Qureshi,DSA,Trees,8.9,10,2026-08-07
+CS017,Qureshi,DSA,Trees,9.9,10,2026-09-02
+CS017,Qureshi,DSA,Graphs,6.1,10,2026-08-03
+CS017,Qureshi,DSA,Graphs,5.3,10,2026-09-14
+CS017,Qureshi,DSA,Sorting,9.3,10,2026-08-18
+CS017,Qureshi,DSA,Sorting,9.8,10,2026-09-05
+CS017,Qureshi,DSA,Dynamic Programming,8.4,10,2026-08-06
+CS017,Qureshi,DSA,Dynamic Programming,8.9,10,2026-09-13
+CS017,Qureshi,CN,Subnetting,8.3,10,2026-08-10
+CS017,Qureshi,CN,Subnetting,8.3,10,2026-09-22
+CS017,Qureshi,CN,TCP,7.8,10,2026-08-10
+CS017,Qureshi,CN,TCP,10.0,10,2026-09-24
+CS017,Qureshi,CN,Routing,7.8,10,2026-08-14
+CS017,Qureshi,CN,Routing,8.9,10,2026-09-01
+CS017,Qureshi,CN,HTTP,10.0,10,2026-08-12
+CS017,Qureshi,CN,HTTP,6.9,10,2026-09-21
+CS018,Rohini,DBMS,Normalization,3.4,10,2026-08-27
+CS018,Rohini,DBMS,Normalization,2.6,10,2026-09-03
+CS018,Rohini,DBMS,SQL Joins,3.8,10,2026-08-15
+CS018,Rohini,DBMS,SQL Joins,7.0,10,2026-09-25
+CS018,Rohini,DBMS,Transactions,5.5,10,2026-08-18
+CS018,Rohini,DBMS,Transactions,6.1,10,2026-09-05
+CS018,Rohini,DBMS,Indexing,1.3,10,2026-08-03
+CS018,Rohini,DBMS,Indexing,1.7,10,2026-09-19
+CS018,Rohini,OS,Deadlocks,4.8,10,2026-08-17
+CS018,Rohini,OS,Deadlocks,5.4,10,2026-09-06
+CS018,Rohini,OS,CPU Scheduling,5.8,10,2026-08-17
+CS018,Rohini,OS,CPU Scheduling,6.6,10,2026-09-06
+CS018,Rohini,OS,Paging,3.0,10,2026-08-16
+CS018,Rohini,OS,Paging,3.0,10,2026-09-25
+CS018,Rohini,OS,Synchronization,6.2,10,2026-08-07
+CS018,Rohini,OS,Synchronization,3.8,10,2026-09-10
+CS018,Rohini,DSA,Trees,6.9,10,2026-08-16
+CS018,Rohini,DSA,Trees,7.5,10,2026-09-11
+CS018,Rohini,DSA,Graphs,7.3,10,2026-08-13
+CS018,Rohini,DSA,Graphs,6.7,10,2026-09-03
+CS018,Rohini,DSA,Sorting,6.4,10,2026-08-27
+CS018,Rohini,DSA,Sorting,5.3,10,2026-09-06
+CS018,Rohini,DSA,Dynamic Programming,4.3,10,2026-08-20
+CS018,Rohini,DSA,Dynamic Programming,4.6,10,2026-09-13
+CS018,Rohini,CN,Subnetting,2.1,10,2026-08-16
+CS018,Rohini,CN,Subnetting,2.8,10,2026-09-06
+CS018,Rohini,CN,TCP,5.1,10,2026-08-17
+CS018,Rohini,CN,TCP,5.9,10,2026-09-06
+CS018,Rohini,CN,Routing,5.0,10,2026-08-08
+CS018,Rohini,CN,Routing,6.3,10,2026-09-24
+CS018,Rohini,CN,HTTP,5.6,10,2026-08-18
+CS018,Rohini,CN,HTTP,5.4,10,2026-09-27
+CS019,Sneha,DBMS,Normalization,7.1,10,2026-08-28
+CS019,Sneha,DBMS,Normalization,9.1,10,2026-09-21
+CS019,Sneha,DBMS,SQL Joins,5.3,10,2026-08-10
+CS019,Sneha,DBMS,SQL Joins,4.4,10,2026-09-19
+CS019,Sneha,DBMS,Transactions,7.9,10,2026-08-12
+CS019,Sneha,DBMS,Transactions,9.4,10,2026-09-15
+CS019,Sneha,DBMS,Indexing,7.3,10,2026-08-01
+CS019,Sneha,DBMS,Indexing,8.5,10,2026-09-20
+CS019,Sneha,OS,Deadlocks,8.9,10,2026-08-15
+CS019,Sneha,OS,Deadlocks,8.4,10,2026-09-25
+CS019,Sneha,OS,CPU Scheduling,6.7,10,2026-08-27
+CS019,Sneha,OS,CPU Scheduling,7.4,10,2026-09-06
+CS019,Sneha,OS,Paging,8.2,10,2026-08-03
+CS019,Sneha,OS,Paging,7.7,10,2026-09-05
+CS019,Sneha,OS,Synchronization,7.4,10,2026-08-26
+CS019,Sneha,OS,Synchronization,9.2,10,2026-09-15
+CS019,Sneha,DSA,Trees,6.6,10,2026-08-02
+CS019,Sneha,DSA,Trees,8.5,10,2026-09-21
+CS019,Sneha,DSA,Graphs,9.3,10,2026-08-11
+CS019,Sneha,DSA,Graphs,10.0,10,2026-09-25
+CS019,Sneha,DSA,Sorting,5.0,10,2026-08-25
+CS019,Sneha,DSA,Sorting,5.3,10,2026-09-17
+CS019,Sneha,DSA,Dynamic Programming,8.9,10,2026-08-26
+CS019,Sneha,DSA,Dynamic Programming,7.7,10,2026-09-05
+CS019,Sneha,CN,Subnetting,8.2,10,2026-08-20
+CS019,Sneha,CN,Subnetting,8.6,10,2026-09-24
+CS019,Sneha,CN,TCP,7.8,10,2026-08-05
+CS019,Sneha,CN,TCP,8.1,10,2026-09-16
+CS019,Sneha,CN,Routing,7.5,10,2026-08-26
+CS019,Sneha,CN,Routing,10.0,10,2026-09-06
+CS019,Sneha,CN,HTTP,7.3,10,2026-08-08
+CS019,Sneha,CN,HTTP,7.2,10,2026-09-03
+CS020,Tanvi,DBMS,Normalization,8.0,10,2026-08-05
+CS020,Tanvi,DBMS,Normalization,10.0,10,2026-09-09
+CS020,Tanvi,DBMS,SQL Joins,6.2,10,2026-08-07
+CS020,Tanvi,DBMS,SQL Joins,8.8,10,2026-09-19
+CS020,Tanvi,DBMS,Transactions,5.4,10,2026-08-11
+CS020,Tanvi,DBMS,Transactions,7.1,10,2026-09-12
+CS020,Tanvi,DBMS,Indexing,8.8,10,2026-08-06
+CS020,Tanvi,DBMS,Indexing,9.0,10,2026-09-21
+CS020,Tanvi,OS,Deadlocks,9.5,10,2026-08-13
+CS020,Tanvi,OS,Deadlocks,8.3,10,2026-09-06
+CS020,Tanvi,OS,CPU Scheduling,5.6,10,2026-08-25
+CS020,Tanvi,OS,CPU Scheduling,5.4,10,2026-09-17
+CS020,Tanvi,OS,Paging,9.9,10,2026-08-28
+CS020,Tanvi,OS,Paging,9.4,10,2026-09-15
+CS020,Tanvi,OS,Synchronization,7.1,10,2026-08-04
+CS020,Tanvi,OS,Synchronization,8.4,10,2026-09-09
+CS020,Tanvi,DSA,Trees,6.7,10,2026-08-13
+CS020,Tanvi,DSA,Trees,6.0,10,2026-09-24
+CS020,Tanvi,DSA,Graphs,5.7,10,2026-08-12
+CS020,Tanvi,DSA,Graphs,5.4,10,2026-09-19
+CS020,Tanvi,DSA,Sorting,8.7,10,2026-08-03
+CS020,Tanvi,DSA,Sorting,9.5,10,2026-09-15
+CS020,Tanvi,DSA,Dynamic Programming,8.4,10,2026-08-02
+CS020,Tanvi,DSA,Dynamic Programming,10.0,10,2026-09-10
+CS020,Tanvi,CN,Subnetting,8.5,10,2026-08-21
+CS020,Tanvi,CN,Subnetting,8.2,10,2026-09-28
+CS020,Tanvi,CN,TCP,7.1,10,2026-08-11
+CS020,Tanvi,CN,TCP,8.2,10,2026-09-24
+CS020,Tanvi,CN,Routing,8.5,10,2026-08-05
+CS020,Tanvi,CN,Routing,8.9,10,2026-09-10
+CS020,Tanvi,CN,HTTP,7.5,10,2026-08-17
+CS020,Tanvi,CN,HTTP,8.2,10,2026-09-12
+CS021,Uma,DBMS,Normalization,8.3,10,2026-08-02
+CS021,Uma,DBMS,Normalization,9.0,10,2026-09-01
+CS021,Uma,DBMS,SQL Joins,7.8,10,2026-08-17
+CS021,Uma,DBMS,SQL Joins,8.8,10,2026-09-12
+CS021,Uma,DBMS,Transactions,7.6,10,2026-08-10
+CS021,Uma,DBMS,Transactions,8.9,10,2026-09-19
+CS021,Uma,DBMS,Indexing,6.3,10,2026-08-27
+CS021,Uma,DBMS,Indexing,7.0,10,2026-09-16
+CS021,Uma,OS,Deadlocks,8.6,10,2026-08-26
+CS021,Uma,OS,Deadlocks,9.3,10,2026-09-08
+CS021,Uma,OS,CPU Scheduling,8.3,10,2026-08-03
+CS021,Uma,OS,CPU Scheduling,8.2,10,2026-09-21
+CS021,Uma,OS,Paging,9.3,10,2026-08-09
+CS021,Uma,OS,Paging,10.0,10,2026-09-13
+CS021,Uma,OS,Synchronization,9.4,10,2026-08-02
+CS021,Uma,OS,Synchronization,7.0,10,2026-09-21
+CS021,Uma,DSA,Trees,9.3,10,2026-08-20
+CS021,Uma,DSA,Trees,7.4,10,2026-09-21
+CS021,Uma,DSA,Graphs,7.5,10,2026-08-17
+CS021,Uma,DSA,Graphs,8.6,10,2026-09-24
+CS021,Uma,DSA,Sorting,8.0,10,2026-08-01
+CS021,Uma,DSA,Sorting,9.2,10,2026-09-02
+CS021,Uma,DSA,Dynamic Programming,8.7,10,2026-08-06
+CS021,Uma,DSA,Dynamic Programming,9.2,10,2026-09-08
+CS021,Uma,CN,Subnetting,9.6,10,2026-08-04
+CS021,Uma,CN,Subnetting,10.0,10,2026-09-01
+CS021,Uma,CN,TCP,7.5,10,2026-08-07
+CS021,Uma,CN,TCP,8.3,10,2026-09-05
+CS021,Uma,CN,Routing,7.6,10,2026-08-21
+CS021,Uma,CN,Routing,9.7,10,2026-09-17
+CS021,Uma,CN,HTTP,5.2,10,2026-08-20
+CS021,Uma,CN,HTTP,5.6,10,2026-09-06
+CS022,Vaishnavi,DBMS,Normalization,8.6,10,2026-08-26
+CS022,Vaishnavi,DBMS,Normalization,8.0,10,2026-09-16
+CS022,Vaishnavi,DBMS,SQL Joins,6.8,10,2026-08-28
+CS022,Vaishnavi,DBMS,SQL Joins,7.3,10,2026-09-14
+CS022,Vaishnavi,DBMS,Transactions,6.8,10,2026-08-24
+CS022,Vaishnavi,DBMS,Transactions,6.4,10,2026-09-21
+CS022,Vaishnavi,DBMS,Indexing,6.2,10,2026-08-04
+CS022,Vaishnavi,DBMS,Indexing,7.6,10,2026-09-09
+CS022,Vaishnavi,OS,Deadlocks,6.8,10,2026-08-11
+CS022,Vaishnavi,OS,Deadlocks,7.6,10,2026-09-24
+CS022,Vaishnavi,OS,CPU Scheduling,8.7,10,2026-08-09
+CS022,Vaishnavi,OS,CPU Scheduling,6.4,10,2026-09-23
+CS022,Vaishnavi,OS,Paging,8.0,10,2026-08-22
+CS022,Vaishnavi,OS,Paging,7.8,10,2026-09-14
+CS022,Vaishnavi,OS,Synchronization,6.0,10,2026-08-09
+CS022,Vaishnavi,OS,Synchronization,5.5,10,2026-09-10
+CS022,Vaishnavi,DSA,Trees,5.3,10,2026-08-07
+CS022,Vaishnavi,DSA,Trees,5.6,10,2026-09-03
+CS022,Vaishnavi,DSA,Graphs,4.1,10,2026-08-09
+CS022,Vaishnavi,DSA,Graphs,4.5,10,2026-09-08
+CS022,Vaishnavi,DSA,Sorting,4.3,10,2026-08-06
+CS022,Vaishnavi,DSA,Sorting,4.1,10,2026-09-24
+CS022,Vaishnavi,DSA,Dynamic Programming,7.3,10,2026-08-13
+CS022,Vaishnavi,DSA,Dynamic Programming,7.1,10,2026-09-11
+CS022,Vaishnavi,CN,Subnetting,6.1,10,2026-08-28
+CS022,Vaishnavi,CN,Subnetting,6.9,10,2026-09-21
+CS022,Vaishnavi,CN,TCP,9.0,10,2026-08-27
+CS022,Vaishnavi,CN,TCP,6.2,10,2026-09-18
+CS022,Vaishnavi,CN,Routing,5.1,10,2026-08-23
+CS022,Vaishnavi,CN,Routing,7.7,10,2026-09-01
+CS022,Vaishnavi,CN,HTTP,7.4,10,2026-08-24
+CS022,Vaishnavi,CN,HTTP,6.6,10,2026-09-08
+CS023,Waseem,DBMS,Normalization,6.1,10,2026-08-06
+CS023,Waseem,DBMS,Normalization,7.1,10,2026-09-05
+CS023,Waseem,DBMS,SQL Joins,7.5,10,2026-08-20
+CS023,Waseem,DBMS,SQL Joins,7.8,10,2026-09-06
+CS023,Waseem,DBMS,Transactions,6.8,10,2026-08-01
+CS023,Waseem,DBMS,Transactions,8.1,10,2026-09-01
+CS023,Waseem,DBMS,Indexing,8.4,10,2026-08-21
+CS023,Waseem,DBMS,Indexing,8.0,10,2026-09-02
+CS023,Waseem,OS,Deadlocks,6.6,10,2026-08-03
+CS023,Waseem,OS,Deadlocks,6.3,10,2026-09-28
+CS023,Waseem,OS,CPU Scheduling,6.3,10,2026-08-27
+CS023,Waseem,OS,CPU Scheduling,7.2,10,2026-09-27
+CS023,Waseem,OS,Paging,3.0,10,2026-08-28
+CS023,Waseem,OS,Paging,4.6,10,2026-09-25
+CS023,Waseem,OS,Synchronization,8.9,10,2026-08-04
+CS023,Waseem,OS,Synchronization,6.6,10,2026-09-08
+CS023,Waseem,DSA,Trees,7.2,10,2026-08-02
+CS023,Waseem,DSA,Trees,8.1,10,2026-09-28
+CS023,Waseem,DSA,Graphs,5.5,10,2026-08-03
+CS023,Waseem,DSA,Graphs,4.1,10,2026-09-27
+CS023,Waseem,DSA,Sorting,7.1,10,2026-08-16
+CS023,Waseem,DSA,Sorting,6.4,10,2026-09-04
+CS023,Waseem,DSA,Dynamic Programming,8.1,10,2026-08-21
+CS023,Waseem,DSA,Dynamic Programming,8.8,10,2026-09-07
+CS023,Waseem,CN,Subnetting,6.8,10,2026-08-09
+CS023,Waseem,CN,Subnetting,8.5,10,2026-09-01
+CS023,Waseem,CN,TCP,5.8,10,2026-08-02
+CS023,Waseem,CN,TCP,9.3,10,2026-09-23
+CS023,Waseem,CN,Routing,7.2,10,2026-08-25
+CS023,Waseem,CN,Routing,5.7,10,2026-09-20
+CS023,Waseem,CN,HTTP,2.5,10,2026-08-20
+CS023,Waseem,CN,HTTP,4.8,10,2026-09-24
+CS024,Yamini,DBMS,Normalization,2.0,10,2026-08-23
+CS024,Yamini,DBMS,Normalization,1.6,10,2026-09-02
+CS024,Yamini,DBMS,SQL Joins,4.0,10,2026-08-28
+CS024,Yamini,DBMS,SQL Joins,5.1,10,2026-09-27
+CS024,Yamini,DBMS,Transactions,6.0,10,2026-08-06
+CS024,Yamini,DBMS,Transactions,6.1,10,2026-09-14
+CS024,Yamini,DBMS,Indexing,5.2,10,2026-08-25
+CS024,Yamini,DBMS,Indexing,5.2,10,2026-09-25
+CS024,Yamini,OS,Deadlocks,4.7,10,2026-08-16
+CS024,Yamini,OS,Deadlocks,5.2,10,2026-09-04
+CS024,Yamini,OS,CPU Scheduling,3.0,10,2026-08-06
+CS024,Yamini,OS,CPU Scheduling,5.3,10,2026-09-16
+CS024,Yamini,OS,Paging,0.5,10,2026-08-17
+CS024,Yamini,OS,Paging,1.2,10,2026-09-09
+CS024,Yamini,OS,Synchronization,4.2,10,2026-08-27
+CS024,Yamini,OS,Synchronization,5.0,10,2026-09-07
+CS024,Yamini,DSA,Trees,2.4,10,2026-08-06
+CS024,Yamini,DSA,Trees,2.2,10,2026-09-04
+CS024,Yamini,DSA,Graphs,6.1,10,2026-08-16
+CS024,Yamini,DSA,Graphs,4.7,10,2026-09-26
+CS024,Yamini,DSA,Sorting,5.8,10,2026-08-04
+CS024,Yamini,DSA,Sorting,5.2,10,2026-09-21
+CS024,Yamini,DSA,Dynamic Programming,4.5,10,2026-08-13
+CS024,Yamini,DSA,Dynamic Programming,5.6,10,2026-09-24
+CS024,Yamini,CN,Subnetting,6.3,10,2026-08-01
+CS024,Yamini,CN,Subnetting,6.2,10,2026-09-12
+CS024,Yamini,CN,TCP,4.8,10,2026-08-18
+CS024,Yamini,CN,TCP,5.9,10,2026-09-17
+CS024,Yamini,CN,Routing,5.9,10,2026-08-21
+CS024,Yamini,CN,Routing,7.5,10,2026-09-08
+CS024,Yamini,CN,HTTP,5.1,10,2026-08-20
+CS024,Yamini,CN,HTTP,5.1,10,2026-09-25
+CS025,Zoya,DBMS,Normalization,5.8,10,2026-08-15
+CS025,Zoya,DBMS,Normalization,8.0,10,2026-09-22
+CS025,Zoya,DBMS,SQL Joins,4.1,10,2026-08-15
+CS025,Zoya,DBMS,SQL Joins,5.1,10,2026-09-15
+CS025,Zoya,DBMS,Transactions,7.3,10,2026-08-08
+CS025,Zoya,DBMS,Transactions,7.6,10,2026-09-05
+CS025,Zoya,DBMS,Indexing,7.0,10,2026-08-23
+CS025,Zoya,DBMS,Indexing,9.3,10,2026-09-08
+CS025,Zoya,OS,Deadlocks,6.9,10,2026-08-25
+CS025,Zoya,OS,Deadlocks,8.2,10,2026-09-23
+CS025,Zoya,OS,CPU Scheduling,5.4,10,2026-08-24
+CS025,Zoya,OS,CPU Scheduling,4.3,10,2026-09-05
+CS025,Zoya,OS,Paging,9.0,10,2026-08-20
+CS025,Zoya,OS,Paging,8.0,10,2026-09-17
+CS025,Zoya,OS,Synchronization,7.2,10,2026-08-07
+CS025,Zoya,OS,Synchronization,8.7,10,2026-09-09
+CS025,Zoya,DSA,Trees,9.0,10,2026-08-04
+CS025,Zoya,DSA,Trees,8.0,10,2026-09-06
+CS025,Zoya,DSA,Graphs,5.2,10,2026-08-13
+CS025,Zoya,DSA,Graphs,5.3,10,2026-09-05
+CS025,Zoya,DSA,Sorting,9.2,10,2026-08-24
+CS025,Zoya,DSA,Sorting,8.0,10,2026-09-10
+CS025,Zoya,DSA,Dynamic Programming,7.1,10,2026-08-21
+CS025,Zoya,DSA,Dynamic Programming,8.4,10,2026-09-04
+CS025,Zoya,CN,Subnetting,7.2,10,2026-08-15
+CS025,Zoya,CN,Subnetting,10.0,10,2026-09-02
+CS025,Zoya,CN,TCP,9.4,10,2026-08-14
+CS025,Zoya,CN,TCP,8.3,10,2026-09-23
+CS025,Zoya,CN,Routing,5.2,10,2026-08-10
+CS025,Zoya,CN,Routing,7.9,10,2026-09-15
+CS025,Zoya,CN,HTTP,8.3,10,2026-08-24
+CS025,Zoya,CN,HTTP,8.3,10,2026-09-13
+CS026,Aarav,DBMS,Normalization,3.2,10,2026-08-14
+CS026,Aarav,DBMS,Normalization,4.5,10,2026-09-28
+CS026,Aarav,DBMS,SQL Joins,4.7,10,2026-08-25
+CS026,Aarav,DBMS,SQL Joins,6.6,10,2026-09-21
+CS026,Aarav,DBMS,Transactions,4.0,10,2026-08-22
+CS026,Aarav,DBMS,Transactions,3.5,10,2026-09-06
+CS026,Aarav,DBMS,Indexing,3.9,10,2026-08-11
+CS026,Aarav,DBMS,Indexing,4.4,10,2026-09-09
+CS026,Aarav,OS,Deadlocks,4.2,10,2026-08-14
+CS026,Aarav,OS,Deadlocks,4.8,10,2026-09-08
+CS026,Aarav,OS,CPU Scheduling,4.8,10,2026-08-21
+CS026,Aarav,OS,CPU Scheduling,3.7,10,2026-09-06
+CS026,Aarav,OS,Paging,4.5,10,2026-08-15
+CS026,Aarav,OS,Paging,6.1,10,2026-09-01
+CS026,Aarav,OS,Synchronization,3.9,10,2026-08-22
+CS026,Aarav,OS,Synchronization,4.5,10,2026-09-22
+CS026,Aarav,DSA,Trees,5.0,10,2026-08-21
+CS026,Aarav,DSA,Trees,4.9,10,2026-09-11
+CS026,Aarav,DSA,Graphs,4.7,10,2026-08-16
+CS026,Aarav,DSA,Graphs,4.2,10,2026-09-04
+CS026,Aarav,DSA,Sorting,5.6,10,2026-08-06
+CS026,Aarav,DSA,Sorting,5.4,10,2026-09-23
+CS026,Aarav,DSA,Dynamic Programming,2.1,10,2026-08-17
+CS026,Aarav,DSA,Dynamic Programming,0.5,10,2026-09-12
+CS026,Aarav,CN,Subnetting,5.5,10,2026-08-18
+CS026,Aarav,CN,Subnetting,5.8,10,2026-09-07
+CS026,Aarav,CN,TCP,1.5,10,2026-08-21
+CS026,Aarav,CN,TCP,1.3,10,2026-09-26
+CS026,Aarav,CN,Routing,5.0,10,2026-08-14
+CS026,Aarav,CN,Routing,4.2,10,2026-09-24
+CS026,Aarav,CN,HTTP,5.1,10,2026-08-22
+CS026,Aarav,CN,HTTP,4.9,10,2026-09-06
+CS027,Bhargav,DBMS,Normalization,6.9,10,2026-08-13
+CS027,Bhargav,DBMS,Normalization,7.1,10,2026-09-02
+CS027,Bhargav,DBMS,SQL Joins,7.2,10,2026-08-14
+CS027,Bhargav,DBMS,SQL Joins,6.9,10,2026-09-21
+CS027,Bhargav,DBMS,Transactions,6.0,10,2026-08-09
+CS027,Bhargav,DBMS,Transactions,6.1,10,2026-09-04
+CS027,Bhargav,DBMS,Indexing,6.5,10,2026-08-17
+CS027,Bhargav,DBMS,Indexing,8.3,10,2026-09-08
+CS027,Bhargav,OS,Deadlocks,8.6,10,2026-08-15
+CS027,Bhargav,OS,Deadlocks,6.8,10,2026-09-07
+CS027,Bhargav,OS,CPU Scheduling,7.3,10,2026-08-03
+CS027,Bhargav,OS,CPU Scheduling,8.6,10,2026-09-26
+CS027,Bhargav,OS,Paging,6.4,10,2026-08-21
+CS027,Bhargav,OS,Paging,6.3,10,2026-09-18
+CS027,Bhargav,OS,Synchronization,6.0,10,2026-08-05
+CS027,Bhargav,OS,Synchronization,5.2,10,2026-09-12
+CS027,Bhargav,DSA,Trees,5.4,10,2026-08-26
+CS027,Bhargav,DSA,Trees,5.4,10,2026-09-27
+CS027,Bhargav,DSA,Graphs,3.7,10,2026-08-25
+CS027,Bhargav,DSA,Graphs,8.4,10,2026-09-18
+CS027,Bhargav,DSA,Sorting,2.5,10,2026-08-16
+CS027,Bhargav,DSA,Sorting,2.8,10,2026-09-12
+CS027,Bhargav,DSA,Dynamic Programming,3.6,10,2026-08-23
+CS027,Bhargav,DSA,Dynamic Programming,3.4,10,2026-09-13
+CS027,Bhargav,CN,Subnetting,5.3,10,2026-08-22
+CS027,Bhargav,CN,Subnetting,4.5,10,2026-09-06
+CS027,Bhargav,CN,TCP,4.6,10,2026-08-26
+CS027,Bhargav,CN,TCP,7.1,10,2026-09-09
+CS027,Bhargav,CN,Routing,5.4,10,2026-08-11
+CS027,Bhargav,CN,Routing,7.9,10,2026-09-16
+CS027,Bhargav,CN,HTTP,5.0,10,2026-08-03
+CS027,Bhargav,CN,HTTP,7.0,10,2026-09-22
+CS028,Chaitanya,DBMS,Normalization,8.3,10,2026-08-19
+CS028,Chaitanya,DBMS,Normalization,9.4,10,2026-09-11
+CS028,Chaitanya,DBMS,SQL Joins,8.6,10,2026-08-27
+CS028,Chaitanya,DBMS,SQL Joins,8.7,10,2026-09-12
+CS028,Chaitanya,DBMS,Transactions,8.4,10,2026-08-01
+CS028,Chaitanya,DBMS,Transactions,9.0,10,2026-09-07
+CS028,Chaitanya,DBMS,Indexing,9.8,10,2026-08-09
+CS028,Chaitanya,DBMS,Indexing,8.7,10,2026-09-20
+CS028,Chaitanya,OS,Deadlocks,8.9,10,2026-08-08
+CS028,Chaitanya,OS,Deadlocks,9.4,10,2026-09-06
+CS028,Chaitanya,OS,CPU Scheduling,8.7,10,2026-08-05
+CS028,Chaitanya,OS,CPU Scheduling,8.3,10,2026-09-07
+CS028,Chaitanya,OS,Paging,9.8,10,2026-08-06
+CS028,Chaitanya,OS,Paging,8.2,10,2026-09-20
+CS028,Chaitanya,OS,Synchronization,9.5,10,2026-08-26
+CS028,Chaitanya,OS,Synchronization,8.4,10,2026-09-03
+CS028,Chaitanya,DSA,Trees,7.6,10,2026-08-26
+CS028,Chaitanya,DSA,Trees,7.5,10,2026-09-21
+CS028,Chaitanya,DSA,Graphs,6.1,10,2026-08-23
+CS028,Chaitanya,DSA,Graphs,5.8,10,2026-09-07
+CS028,Chaitanya,DSA,Sorting,7.1,10,2026-08-15
+CS028,Chaitanya,DSA,Sorting,8.9,10,2026-09-22
+CS028,Chaitanya,DSA,Dynamic Programming,9.4,10,2026-08-09
+CS028,Chaitanya,DSA,Dynamic Programming,8.4,10,2026-09-14
+CS028,Chaitanya,CN,Subnetting,8.6,10,2026-08-16
+CS028,Chaitanya,CN,Subnetting,9.6,10,2026-09-18
+CS028,Chaitanya,CN,TCP,6.7,10,2026-08-05
+CS028,Chaitanya,CN,TCP,6.7,10,2026-09-23
+CS028,Chaitanya,CN,Routing,7.5,10,2026-08-18
+CS028,Chaitanya,CN,Routing,9.2,10,2026-09-20
+CS028,Chaitanya,CN,HTTP,8.6,10,2026-08-27
+CS028,Chaitanya,CN,HTTP,9.1,10,2026-09-11
+CS029,Deepak,DBMS,Normalization,5.9,10,2026-08-22
+CS029,Deepak,DBMS,Normalization,7.9,10,2026-09-03
+CS029,Deepak,DBMS,SQL Joins,7.0,10,2026-08-21
+CS029,Deepak,DBMS,SQL Joins,8.0,10,2026-09-01
+CS029,Deepak,DBMS,Transactions,6.9,10,2026-08-24
+CS029,Deepak,DBMS,Transactions,7.2,10,2026-09-11
+CS029,Deepak,DBMS,Indexing,6.7,10,2026-08-16
+CS029,Deepak,DBMS,Indexing,6.8,10,2026-09-16
+CS029,Deepak,OS,Deadlocks,3.8,10,2026-08-07
+CS029,Deepak,OS,Deadlocks,3.9,10,2026-09-23
+CS029,Deepak,OS,CPU Scheduling,6.2,10,2026-08-04
+CS029,Deepak,OS,CPU Scheduling,7.4,10,2026-09-28
+CS029,Deepak,OS,Paging,6.2,10,2026-08-25
+CS029,Deepak,OS,Paging,6.5,10,2026-09-17
+CS029,Deepak,OS,Synchronization,1.9,10,2026-08-10
+CS029,Deepak,OS,Synchronization,3.7,10,2026-09-14
+CS029,Deepak,DSA,Trees,6.2,10,2026-08-02
+CS029,Deepak,DSA,Trees,7.8,10,2026-09-27
+CS029,Deepak,DSA,Graphs,6.4,10,2026-08-16
+CS029,Deepak,DSA,Graphs,8.0,10,2026-09-13
+CS029,Deepak,DSA,Sorting,2.5,10,2026-08-28
+CS029,Deepak,DSA,Sorting,6.6,10,2026-09-17
+CS029,Deepak,DSA,Dynamic Programming,6.3,10,2026-08-16
+CS029,Deepak,DSA,Dynamic Programming,7.7,10,2026-09-26
+CS029,Deepak,CN,Subnetting,7.0,10,2026-08-23
+CS029,Deepak,CN,Subnetting,7.6,10,2026-09-10
+CS029,Deepak,CN,TCP,8.3,10,2026-08-03
+CS029,Deepak,CN,TCP,8.9,10,2026-09-26
+CS029,Deepak,CN,Routing,7.5,10,2026-08-18
+CS029,Deepak,CN,Routing,7.2,10,2026-09-13
+CS029,Deepak,CN,HTTP,3.5,10,2026-08-10
+CS029,Deepak,CN,HTTP,4.3,10,2026-09-04
+CS030,Eshwar,DBMS,Normalization,4.6,10,2026-08-17
+CS030,Eshwar,DBMS,Normalization,4.8,10,2026-09-18
+CS030,Eshwar,DBMS,SQL Joins,3.6,10,2026-08-21
+CS030,Eshwar,DBMS,SQL Joins,4.3,10,2026-09-22
+CS030,Eshwar,DBMS,Transactions,4.1,10,2026-08-22
+CS030,Eshwar,DBMS,Transactions,4.0,10,2026-09-03
+CS030,Eshwar,DBMS,Indexing,4.8,10,2026-08-15
+CS030,Eshwar,DBMS,Indexing,6.4,10,2026-09-21
+CS030,Eshwar,OS,Deadlocks,4.6,10,2026-08-06
+CS030,Eshwar,OS,Deadlocks,4.7,10,2026-09-28
+CS030,Eshwar,OS,CPU Scheduling,6.0,10,2026-08-21
+CS030,Eshwar,OS,CPU Scheduling,5.5,10,2026-09-01
+CS030,Eshwar,OS,Paging,3.4,10,2026-08-26
+CS030,Eshwar,OS,Paging,6.4,10,2026-09-10
+CS030,Eshwar,OS,Synchronization,3.9,10,2026-08-10
+CS030,Eshwar,OS,Synchronization,4.9,10,2026-09-06
+CS030,Eshwar,DSA,Trees,3.8,10,2026-08-14
+CS030,Eshwar,DSA,Trees,5.5,10,2026-09-19
+CS030,Eshwar,DSA,Graphs,0.5,10,2026-08-02
+CS030,Eshwar,DSA,Graphs,0.7,10,2026-09-16
+CS030,Eshwar,DSA,Sorting,4.3,10,2026-08-04
+CS030,Eshwar,DSA,Sorting,5.0,10,2026-09-25
+CS030,Eshwar,DSA,Dynamic Programming,5.0,10,2026-08-13
+CS030,Eshwar,DSA,Dynamic Programming,4.0,10,2026-09-15
+CS030,Eshwar,CN,Subnetting,5.8,10,2026-08-20
+CS030,Eshwar,CN,Subnetting,5.7,10,2026-09-19
+CS030,Eshwar,CN,TCP,5.8,10,2026-08-05
+CS030,Eshwar,CN,TCP,5.1,10,2026-09-16
+CS030,Eshwar,CN,Routing,4.7,10,2026-08-03
+CS030,Eshwar,CN,Routing,4.0,10,2026-09-21
+CS030,Eshwar,CN,HTTP,0.5,10,2026-08-21
+CS030,Eshwar,CN,HTTP,2.7,10,2026-09-01
+CS031,Farhan,DBMS,Normalization,8.0,10,2026-08-05
+CS031,Farhan,DBMS,Normalization,8.0,10,2026-09-16
+CS031,Farhan,DBMS,SQL Joins,7.8,10,2026-08-08
+CS031,Farhan,DBMS,SQL Joins,7.2,10,2026-09-15
+CS031,Farhan,DBMS,Transactions,6.4,10,2026-08-02
+CS031,Farhan,DBMS,Transactions,6.4,10,2026-09-12
+CS031,Farhan,DBMS,Indexing,3.8,10,2026-08-28
+CS031,Farhan,DBMS,Indexing,2.8,10,2026-09-05
+CS031,Farhan,OS,Deadlocks,6.4,10,2026-08-21
+CS031,Farhan,OS,Deadlocks,6.6,10,2026-09-18
+CS031,Farhan,OS,CPU Scheduling,6.2,10,2026-08-09
+CS031,Farhan,OS,CPU Scheduling,6.1,10,2026-09-02
+CS031,Farhan,OS,Paging,6.4,10,2026-08-01
+CS031,Farhan,OS,Paging,6.9,10,2026-09-21
+CS031,Farhan,OS,Synchronization,5.9,10,2026-08-13
+CS031,Farhan,OS,Synchronization,5.9,10,2026-09-10
+CS031,Farhan,DSA,Trees,6.0,10,2026-08-28
+CS031,Farhan,DSA,Trees,8.1,10,2026-09-27
+CS031,Farhan,DSA,Graphs,6.1,10,2026-08-12
+CS031,Farhan,DSA,Graphs,7.0,10,2026-09-19
+CS031,Farhan,DSA,Sorting,6.3,10,2026-08-06
+CS031,Farhan,DSA,Sorting,6.0,10,2026-09-05
+CS031,Farhan,DSA,Dynamic Programming,6.9,10,2026-08-21
+CS031,Farhan,DSA,Dynamic Programming,6.9,10,2026-09-06
+CS031,Farhan,CN,Subnetting,5.8,10,2026-08-13
+CS031,Farhan,CN,Subnetting,6.3,10,2026-09-25
+CS031,Farhan,CN,TCP,4.1,10,2026-08-26
+CS031,Farhan,CN,TCP,2.1,10,2026-09-25
+CS031,Farhan,CN,Routing,5.7,10,2026-08-02
+CS031,Farhan,CN,Routing,6.7,10,2026-09-20
+CS031,Farhan,CN,HTTP,7.8,10,2026-08-27
+CS031,Farhan,CN,HTTP,6.8,10,2026-09-20
+CS032,Girish,DBMS,Normalization,3.8,10,2026-08-08
+CS032,Girish,DBMS,Normalization,2.8,10,2026-09-13
+CS032,Girish,DBMS,SQL Joins,5.3,10,2026-08-25
+CS032,Girish,DBMS,SQL Joins,7.2,10,2026-09-08
+CS032,Girish,DBMS,Transactions,3.5,10,2026-08-01
+CS032,Girish,DBMS,Transactions,3.1,10,2026-09-11
+CS032,Girish,DBMS,Indexing,5.9,10,2026-08-19
+CS032,Girish,DBMS,Indexing,7.5,10,2026-09-27
+CS032,Girish,OS,Deadlocks,6.1,10,2026-08-10
+CS032,Girish,OS,Deadlocks,5.0,10,2026-09-27
+CS032,Girish,OS,CPU Scheduling,7.2,10,2026-08-19
+CS032,Girish,OS,CPU Scheduling,8.1,10,2026-09-05
+CS032,Girish,OS,Paging,5.7,10,2026-08-26
+CS032,Girish,OS,Paging,8.3,10,2026-09-18
+CS032,Girish,OS,Synchronization,5.2,10,2026-08-12
+CS032,Girish,OS,Synchronization,4.8,10,2026-09-18
+CS032,Girish,DSA,Trees,7.0,10,2026-08-26
+CS032,Girish,DSA,Trees,7.2,10,2026-09-13
+CS032,Girish,DSA,Graphs,3.7,10,2026-08-08
+CS032,Girish,DSA,Graphs,5.2,10,2026-09-10
+CS032,Girish,DSA,Sorting,4.9,10,2026-08-15
+CS032,Girish,DSA,Sorting,5.8,10,2026-09-23
+CS032,Girish,DSA,Dynamic Programming,6.2,10,2026-08-25
+CS032,Girish,DSA,Dynamic Programming,7.3,10,2026-09-01
+CS032,Girish,CN,Subnetting,6.3,10,2026-08-03
+CS032,Girish,CN,Subnetting,5.6,10,2026-09-18
+CS032,Girish,CN,TCP,3.7,10,2026-08-08
+CS032,Girish,CN,TCP,2.3,10,2026-09-13
+CS032,Girish,CN,Routing,4.3,10,2026-08-27
+CS032,Girish,CN,Routing,5.7,10,2026-09-17
+CS032,Girish,CN,HTTP,5.5,10,2026-08-07
+CS032,Girish,CN,HTTP,7.6,10,2026-09-07
+CS033,Harsha,DBMS,Normalization,5.2,10,2026-08-19
+CS033,Harsha,DBMS,Normalization,5.2,10,2026-09-12
+CS033,Harsha,DBMS,SQL Joins,4.6,10,2026-08-05
+CS033,Harsha,DBMS,SQL Joins,6.7,10,2026-09-08
+CS033,Harsha,DBMS,Transactions,8.4,10,2026-08-12
+CS033,Harsha,DBMS,Transactions,6.9,10,2026-09-28
+CS033,Harsha,DBMS,Indexing,6.5,10,2026-08-26
+CS033,Harsha,DBMS,Indexing,6.8,10,2026-09-03
+CS033,Harsha,OS,Deadlocks,6.1,10,2026-08-12
+CS033,Harsha,OS,Deadlocks,7.1,10,2026-09-09
+CS033,Harsha,OS,CPU Scheduling,2.5,10,2026-08-02
+CS033,Harsha,OS,CPU Scheduling,3.2,10,2026-09-07
+CS033,Harsha,OS,Paging,7.3,10,2026-08-16
+CS033,Harsha,OS,Paging,5.9,10,2026-09-19
+CS033,Harsha,OS,Synchronization,4.8,10,2026-08-25
+CS033,Harsha,OS,Synchronization,5.8,10,2026-09-09
+CS033,Harsha,DSA,Trees,3.5,10,2026-08-25
+CS033,Harsha,DSA,Trees,7.0,10,2026-09-19
+CS033,Harsha,DSA,Graphs,6.4,10,2026-08-09
+CS033,Harsha,DSA,Graphs,4.0,10,2026-09-27
+CS033,Harsha,DSA,Sorting,6.0,10,2026-08-06
+CS033,Harsha,DSA,Sorting,6.2,10,2026-09-13
+CS033,Harsha,DSA,Dynamic Programming,5.7,10,2026-08-18
+CS033,Harsha,DSA,Dynamic Programming,6.2,10,2026-09-12
+CS033,Harsha,CN,Subnetting,3.3,10,2026-08-28
+CS033,Harsha,CN,Subnetting,2.5,10,2026-09-03
+CS033,Harsha,CN,TCP,6.3,10,2026-08-04
+CS033,Harsha,CN,TCP,5.1,10,2026-09-23
+CS033,Harsha,CN,Routing,6.1,10,2026-08-19
+CS033,Harsha,CN,Routing,5.9,10,2026-09-08
+CS033,Harsha,CN,HTTP,4.0,10,2026-08-22
+CS033,Harsha,CN,HTTP,4.3,10,2026-09-17
+CS034,Imran,DBMS,Normalization,6.9,10,2026-08-02
+CS034,Imran,DBMS,Normalization,6.8,10,2026-09-09
+CS034,Imran,DBMS,SQL Joins,6.6,10,2026-08-18
+CS034,Imran,DBMS,SQL Joins,6.8,10,2026-09-01
+CS034,Imran,DBMS,Transactions,6.4,10,2026-08-26
+CS034,Imran,DBMS,Transactions,6.6,10,2026-09-17
+CS034,Imran,DBMS,Indexing,3.1,10,2026-08-16
+CS034,Imran,DBMS,Indexing,2.8,10,2026-09-02
+CS034,Imran,OS,Deadlocks,6.9,10,2026-08-01
+CS034,Imran,OS,Deadlocks,7.3,10,2026-09-07
+CS034,Imran,OS,CPU Scheduling,3.1,10,2026-08-19
+CS034,Imran,OS,CPU Scheduling,3.4,10,2026-09-15
+CS034,Imran,OS,Paging,6.3,10,2026-08-11
+CS034,Imran,OS,Paging,6.4,10,2026-09-12
+CS034,Imran,OS,Synchronization,6.2,10,2026-08-16
+CS034,Imran,OS,Synchronization,7.3,10,2026-09-13
+CS034,Imran,DSA,Trees,6.6,10,2026-08-05
+CS034,Imran,DSA,Trees,7.4,10,2026-09-22
+CS034,Imran,DSA,Graphs,7.1,10,2026-08-07
+CS034,Imran,DSA,Graphs,6.2,10,2026-09-26
+CS034,Imran,DSA,Sorting,8.3,10,2026-08-08
+CS034,Imran,DSA,Sorting,7.3,10,2026-09-03
+CS034,Imran,DSA,Dynamic Programming,7.9,10,2026-08-24
+CS034,Imran,DSA,Dynamic Programming,6.1,10,2026-09-05
+CS034,Imran,CN,Subnetting,6.7,10,2026-08-13
+CS034,Imran,CN,Subnetting,4.6,10,2026-09-27
+CS034,Imran,CN,TCP,6.6,10,2026-08-11
+CS034,Imran,CN,TCP,6.9,10,2026-09-11
+CS034,Imran,CN,Routing,6.7,10,2026-08-21
+CS034,Imran,CN,Routing,5.9,10,2026-09-12
+CS034,Imran,CN,HTTP,3.9,10,2026-08-02
+CS034,Imran,CN,HTTP,4.6,10,2026-09-06
+CS035,Jayanth,DBMS,Normalization,7.6,10,2026-08-05
+CS035,Jayanth,DBMS,Normalization,9.2,10,2026-09-01
+CS035,Jayanth,DBMS,SQL Joins,7.5,10,2026-08-11
+CS035,Jayanth,DBMS,SQL Joins,10.0,10,2026-09-26
+CS035,Jayanth,DBMS,Transactions,5.4,10,2026-08-11
+CS035,Jayanth,DBMS,Transactions,6.4,10,2026-09-15
+CS035,Jayanth,DBMS,Indexing,8.1,10,2026-08-17
+CS035,Jayanth,DBMS,Indexing,8.1,10,2026-09-02
+CS035,Jayanth,OS,Deadlocks,3.8,10,2026-08-07
+CS035,Jayanth,OS,Deadlocks,4.4,10,2026-09-18
+CS035,Jayanth,OS,CPU Scheduling,7.0,10,2026-08-09
+CS035,Jayanth,OS,CPU Scheduling,8.4,10,2026-09-25
+CS035,Jayanth,OS,Paging,8.0,10,2026-08-09
+CS035,Jayanth,OS,Paging,9.1,10,2026-09-08
+CS035,Jayanth,OS,Synchronization,5.3,10,2026-08-10
+CS035,Jayanth,OS,Synchronization,5.3,10,2026-09-14
+CS035,Jayanth,DSA,Trees,8.0,10,2026-08-24
+CS035,Jayanth,DSA,Trees,8.1,10,2026-09-10
+CS035,Jayanth,DSA,Graphs,8.5,10,2026-08-15
+CS035,Jayanth,DSA,Graphs,9.3,10,2026-09-26
+CS035,Jayanth,DSA,Sorting,6.6,10,2026-08-15
+CS035,Jayanth,DSA,Sorting,8.3,10,2026-09-01
+CS035,Jayanth,DSA,Dynamic Programming,8.2,10,2026-08-10
+CS035,Jayanth,DSA,Dynamic Programming,6.2,10,2026-09-06
+CS035,Jayanth,CN,Subnetting,7.5,10,2026-08-14
+CS035,Jayanth,CN,Subnetting,8.5,10,2026-09-07
+CS035,Jayanth,CN,TCP,4.8,10,2026-08-27
+CS035,Jayanth,CN,TCP,6.1,10,2026-09-06
+CS035,Jayanth,CN,Routing,7.1,10,2026-08-06
+CS035,Jayanth,CN,Routing,8.2,10,2026-09-07
+CS035,Jayanth,CN,HTTP,6.3,10,2026-08-20
+CS035,Jayanth,CN,HTTP,7.3,10,2026-09-24
+CS036,Kiran,DBMS,Normalization,5.7,10,2026-08-26
+CS036,Kiran,DBMS,Normalization,6.4,10,2026-09-07
+CS036,Kiran,DBMS,SQL Joins,6.2,10,2026-08-03
+CS036,Kiran,DBMS,SQL Joins,7.0,10,2026-09-23
+CS036,Kiran,DBMS,Transactions,3.8,10,2026-08-24
+CS036,Kiran,DBMS,Transactions,3.6,10,2026-09-02
+CS036,Kiran,DBMS,Indexing,3.1,10,2026-08-10
+CS036,Kiran,DBMS,Indexing,4.4,10,2026-09-27
+CS036,Kiran,OS,Deadlocks,5.3,10,2026-08-03
+CS036,Kiran,OS,Deadlocks,5.7,10,2026-09-01
+CS036,Kiran,OS,CPU Scheduling,2.6,10,2026-08-05
+CS036,Kiran,OS,CPU Scheduling,5.4,10,2026-09-28
+CS036,Kiran,OS,Paging,6.4,10,2026-08-19
+CS036,Kiran,OS,Paging,6.7,10,2026-09-27
+CS036,Kiran,OS,Synchronization,7.0,10,2026-08-23
+CS036,Kiran,OS,Synchronization,7.3,10,2026-09-12
+CS036,Kiran,DSA,Trees,5.1,10,2026-08-12
+CS036,Kiran,DSA,Trees,6.5,10,2026-09-17
+CS036,Kiran,DSA,Graphs,8.9,10,2026-08-03
+CS036,Kiran,DSA,Graphs,6.3,10,2026-09-04
+CS036,Kiran,DSA,Sorting,6.3,10,2026-08-27
+CS036,Kiran,DSA,Sorting,7.9,10,2026-09-28
+CS036,Kiran,DSA,Dynamic Programming,8.1,10,2026-08-28
+CS036,Kiran,DSA,Dynamic Programming,6.5,10,2026-09-13
+CS036,Kiran,CN,Subnetting,5.0,10,2026-08-10
+CS036,Kiran,CN,Subnetting,6.4,10,2026-09-28
+CS036,Kiran,CN,TCP,7.9,10,2026-08-15
+CS036,Kiran,CN,TCP,8.2,10,2026-09-17
+CS036,Kiran,CN,Routing,8.3,10,2026-08-05
+CS036,Kiran,CN,Routing,7.6,10,2026-09-01
+CS036,Kiran,CN,HTTP,6.7,10,2026-08-20
+CS036,Kiran,CN,HTTP,7.7,10,2026-09-06
+CS037,Lokesh,DBMS,Normalization,5.4,10,2026-08-23
+CS037,Lokesh,DBMS,Normalization,5.8,10,2026-09-24
+CS037,Lokesh,DBMS,SQL Joins,5.3,10,2026-08-20
+CS037,Lokesh,DBMS,SQL Joins,6.0,10,2026-09-21
+CS037,Lokesh,DBMS,Transactions,4.3,10,2026-08-23
+CS037,Lokesh,DBMS,Transactions,5.3,10,2026-09-15
+CS037,Lokesh,DBMS,Indexing,6.7,10,2026-08-23
+CS037,Lokesh,DBMS,Indexing,6.9,10,2026-09-06
+CS037,Lokesh,OS,Deadlocks,5.7,10,2026-08-16
+CS037,Lokesh,OS,Deadlocks,6.0,10,2026-09-19
+CS037,Lokesh,OS,CPU Scheduling,4.5,10,2026-08-04
+CS037,Lokesh,OS,CPU Scheduling,5.9,10,2026-09-04
+CS037,Lokesh,OS,Paging,4.9,10,2026-08-19
+CS037,Lokesh,OS,Paging,6.1,10,2026-09-08
+CS037,Lokesh,OS,Synchronization,5.6,10,2026-08-19
+CS037,Lokesh,OS,Synchronization,5.5,10,2026-09-15
+CS037,Lokesh,DSA,Trees,2.4,10,2026-08-27
+CS037,Lokesh,DSA,Trees,2.5,10,2026-09-01
+CS037,Lokesh,DSA,Graphs,6.1,10,2026-08-14
+CS037,Lokesh,DSA,Graphs,5.5,10,2026-09-20
+CS037,Lokesh,DSA,Sorting,5.8,10,2026-08-13
+CS037,Lokesh,DSA,Sorting,4.9,10,2026-09-02
+CS037,Lokesh,DSA,Dynamic Programming,5.4,10,2026-08-08
+CS037,Lokesh,DSA,Dynamic Programming,5.0,10,2026-09-27
+CS037,Lokesh,CN,Subnetting,4.8,10,2026-08-19
+CS037,Lokesh,CN,Subnetting,6.7,10,2026-09-26
+CS037,Lokesh,CN,TCP,3.2,10,2026-08-13
+CS037,Lokesh,CN,TCP,3.0,10,2026-09-28
+CS037,Lokesh,CN,Routing,4.5,10,2026-08-05
+CS037,Lokesh,CN,Routing,5.6,10,2026-09-22
+CS037,Lokesh,CN,HTTP,3.1,10,2026-08-14
+CS037,Lokesh,CN,HTTP,2.8,10,2026-09-22
+CS038,Manoj,DBMS,Normalization,8.2,10,2026-08-17
+CS038,Manoj,DBMS,Normalization,8.4,10,2026-09-22
+CS038,Manoj,DBMS,SQL Joins,7.8,10,2026-08-13
+CS038,Manoj,DBMS,SQL Joins,8.0,10,2026-09-25
+CS038,Manoj,DBMS,Transactions,5.5,10,2026-08-02
+CS038,Manoj,DBMS,Transactions,5.1,10,2026-09-26
+CS038,Manoj,DBMS,Indexing,7.0,10,2026-08-02
+CS038,Manoj,DBMS,Indexing,4.8,10,2026-09-02
+CS038,Manoj,OS,Deadlocks,8.2,10,2026-08-22
+CS038,Manoj,OS,Deadlocks,7.0,10,2026-09-20
+CS038,Manoj,OS,CPU Scheduling,7.2,10,2026-08-02
+CS038,Manoj,OS,CPU Scheduling,9.1,10,2026-09-20
+CS038,Manoj,OS,Paging,7.7,10,2026-08-01
+CS038,Manoj,OS,Paging,8.2,10,2026-09-14
+CS038,Manoj,OS,Synchronization,7.4,10,2026-08-04
+CS038,Manoj,OS,Synchronization,8.2,10,2026-09-10
+CS038,Manoj,DSA,Trees,4.2,10,2026-08-02
+CS038,Manoj,DSA,Trees,5.6,10,2026-09-20
+CS038,Manoj,DSA,Graphs,9.3,10,2026-08-09
+CS038,Manoj,DSA,Graphs,7.4,10,2026-09-03
+CS038,Manoj,DSA,Sorting,6.3,10,2026-08-05
+CS038,Manoj,DSA,Sorting,8.2,10,2026-09-15
+CS038,Manoj,DSA,Dynamic Programming,7.7,10,2026-08-10
+CS038,Manoj,DSA,Dynamic Programming,8.3,10,2026-09-14
+CS038,Manoj,CN,Subnetting,6.7,10,2026-08-24
+CS038,Manoj,CN,Subnetting,7.6,10,2026-09-03
+CS038,Manoj,CN,TCP,7.3,10,2026-08-15
+CS038,Manoj,CN,TCP,7.2,10,2026-09-20
+CS038,Manoj,CN,Routing,7.1,10,2026-08-13
+CS038,Manoj,CN,Routing,7.3,10,2026-09-07
+CS038,Manoj,CN,HTTP,6.5,10,2026-08-18
+CS038,Manoj,CN,HTTP,7.7,10,2026-09-10
+CS039,Naveen,DBMS,Normalization,4.2,10,2026-08-18
+CS039,Naveen,DBMS,Normalization,5.6,10,2026-09-13
+CS039,Naveen,DBMS,SQL Joins,8.1,10,2026-08-12
+CS039,Naveen,DBMS,SQL Joins,7.7,10,2026-09-06
+CS039,Naveen,DBMS,Transactions,7.7,10,2026-08-18
+CS039,Naveen,DBMS,Transactions,7.4,10,2026-09-11
+CS039,Naveen,DBMS,Indexing,3.7,10,2026-08-07
+CS039,Naveen,DBMS,Indexing,5.1,10,2026-09-10
+CS039,Naveen,OS,Deadlocks,7.4,10,2026-08-18
+CS039,Naveen,OS,Deadlocks,7.9,10,2026-09-03
+CS039,Naveen,OS,CPU Scheduling,6.6,10,2026-08-22
+CS039,Naveen,OS,CPU Scheduling,7.3,10,2026-09-02
+CS039,Naveen,OS,Paging,5.6,10,2026-08-12
+CS039,Naveen,OS,Paging,7.7,10,2026-09-24
+CS039,Naveen,OS,Synchronization,7.3,10,2026-08-22
+CS039,Naveen,OS,Synchronization,6.8,10,2026-09-24
+CS039,Naveen,DSA,Trees,8.1,10,2026-08-22
+CS039,Naveen,DSA,Trees,7.5,10,2026-09-12
+CS039,Naveen,DSA,Graphs,4.8,10,2026-08-20
+CS039,Naveen,DSA,Graphs,5.5,10,2026-09-28
+CS039,Naveen,DSA,Sorting,7.0,10,2026-08-04
+CS039,Naveen,DSA,Sorting,9.6,10,2026-09-24
+CS039,Naveen,DSA,Dynamic Programming,8.5,10,2026-08-16
+CS039,Naveen,DSA,Dynamic Programming,6.3,10,2026-09-09
+CS039,Naveen,CN,Subnetting,7.6,10,2026-08-23
+CS039,Naveen,CN,Subnetting,6.5,10,2026-09-05
+CS039,Naveen,CN,TCP,6.9,10,2026-08-14
+CS039,Naveen,CN,TCP,8.1,10,2026-09-25
+CS039,Naveen,CN,Routing,6.8,10,2026-08-13
+CS039,Naveen,CN,Routing,7.7,10,2026-09-19
+CS039,Naveen,CN,HTTP,8.3,10,2026-08-09
+CS039,Naveen,CN,HTTP,9.3,10,2026-09-28
+CS040,Pavan,DBMS,Normalization,6.3,10,2026-08-24
+CS040,Pavan,DBMS,Normalization,8.2,10,2026-09-12
+CS040,Pavan,DBMS,SQL Joins,7.1,10,2026-08-18
+CS040,Pavan,DBMS,SQL Joins,8.8,10,2026-09-20
+CS040,Pavan,DBMS,Transactions,6.7,10,2026-08-26
+CS040,Pavan,DBMS,Transactions,8.4,10,2026-09-24
+CS040,Pavan,DBMS,Indexing,7.9,10,2026-08-15
+CS040,Pavan,DBMS,Indexing,7.0,10,2026-09-10
+CS040,Pavan,OS,Deadlocks,7.6,10,2026-08-05
+CS040,Pavan,OS,Deadlocks,8.6,10,2026-09-14
+CS040,Pavan,OS,CPU Scheduling,6.2,10,2026-08-03
+CS040,Pavan,OS,CPU Scheduling,7.4,10,2026-09-27
+CS040,Pavan,OS,Paging,8.0,10,2026-08-27
+CS040,Pavan,OS,Paging,7.5,10,2026-09-20
+CS040,Pavan,OS,Synchronization,8.5,10,2026-08-07
+CS040,Pavan,OS,Synchronization,6.0,10,2026-09-14
+CS040,Pavan,DSA,Trees,9.0,10,2026-08-01
+CS040,Pavan,DSA,Trees,6.5,10,2026-09-02
+CS040,Pavan,DSA,Graphs,7.2,10,2026-08-10
+CS040,Pavan,DSA,Graphs,9.8,10,2026-09-18
+CS040,Pavan,DSA,Sorting,7.5,10,2026-08-14
+CS040,Pavan,DSA,Sorting,6.8,10,2026-09-17
+CS040,Pavan,DSA,Dynamic Programming,8.0,10,2026-08-14
+CS040,Pavan,DSA,Dynamic Programming,6.6,10,2026-09-13
+CS040,Pavan,CN,Subnetting,4.2,10,2026-08-22
+CS040,Pavan,CN,Subnetting,5.2,10,2026-09-12
+CS040,Pavan,CN,TCP,4.4,10,2026-08-03
+CS040,Pavan,CN,TCP,5.1,10,2026-09-17
+CS040,Pavan,CN,Routing,7.4,10,2026-08-17
+CS040,Pavan,CN,Routing,8.8,10,2026-09-13
+CS040,Pavan,CN,HTTP,6.1,10,2026-08-05
+CS040,Pavan,CN,HTTP,6.2,10,2026-09-07
