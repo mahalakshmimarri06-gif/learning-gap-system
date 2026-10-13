@@ -123,6 +123,25 @@
 .student-meta { display: flex; flex-wrap: wrap; gap: 9px; margin: -0.55rem 0 1.35rem; }
 .student-meta span { display: inline-flex; align-items: center; gap: 7px; padding: 7px 11px; border: 1px solid #d9e6eb; border-radius: 999px; background: rgba(255, 255, 255, 0.82); color: var(--ink); font-size: 13px; }
 .student-meta strong { color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.45px; }
+.interview-hero { display: flex; align-items: flex-start; gap: 15px; margin: -0.55rem 0 1.5rem; padding: 19px 21px; border: 1px solid #cfe5e1; border-radius: 15px; background: linear-gradient(112deg, #eaf7f4, rgba(255, 255, 255, 0.94) 78%); box-shadow: 0 8px 22px rgba(27, 72, 67, 0.05); }
+.interview-hero-icon { display: grid; flex: 0 0 38px; width: 38px; height: 38px; place-items: center; border-radius: 12px; background: #d2eee8; color: #087f76; font-size: 22px; }
+.interview-hero strong { color: var(--ink); font: 600 16px "Space Grotesk", sans-serif; }
+.interview-hero p { max-width: 780px; margin: 5px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+[data-testid="stForm"] { border-color: var(--line) !important; border-radius: 14px !important; background: rgba(255, 255, 255, 0.9); }
+.career-action { min-height: 158px; padding: 17px 18px; border: 1px solid #dce7ec; border-radius: 13px; background: linear-gradient(145deg, #fff, #f8fbfd); box-shadow: 0 7px 20px rgba(27, 52, 74, 0.045); }
+.career-action span { display: block; margin-bottom: 10px; color: var(--leaf); font-size: 10px; font-weight: 700; letter-spacing: 0.9px; }
+.career-action strong { color: var(--ink); font: 600 15px/1.4 "Space Grotesk", sans-serif; }
+.career-action p { margin: 8px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.achievement-card { display: flex; min-height: 170px; flex-direction: column; align-items: flex-start; padding: 15px; border: 1px solid #dce5eb; border-radius: 13px; background: rgba(255, 255, 255, 0.75); }
+.achievement-card.earned { border-color: #b9e1d6; background: linear-gradient(145deg, #f0faf6, #fff); box-shadow: 0 6px 18px rgba(28, 111, 88, 0.06); }
+.achievement-icon { margin-bottom: 10px; color: #8b9aaa; font-size: 23px; line-height: 1; }
+.achievement-card.earned .achievement-icon { color: #168c68; }
+.achievement-card strong { color: var(--ink); font: 600 13px/1.4 "Space Grotesk", sans-serif; }
+.achievement-card p { flex: 1; margin: 7px 0 11px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.achievement-card small { color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: 0.8px; }
+.achievement-card.earned small { color: #168c68; }
+.gap-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 8px 0; padding: 9px 11px; border: 1px solid #e2eaf0; border-radius: 9px; background: #fff; color: var(--ink); font-size: 12px; }
+.gap-row strong { color: #b45d46; font: 600 13px "Space Grotesk", sans-serif; }
 h2, h3, h4 { color: var(--ink); font-family: "Space Grotesk", sans-serif; font-weight: 600; }
 h4 { margin: 0.1rem 0 0.4rem; font-size: 16px; }
 

@@ -173,6 +173,31 @@ def trend(df):
     label = "Improving" if diff > 3 else "Declining" if diff < -3 else "Stable"
     return label, diff
 
+def placement_readiness(academic_percent, interview_confidence=None):
+    """Return a transparent preparation indicator, not a hiring prediction."""
+    academic = max(0.0, min(100.0, float(academic_percent)))
+    if interview_confidence is None:
+        score = academic
+        interview_percent = None
+    else:
+        confidence = max(1.0, min(5.0, float(interview_confidence)))
+        interview_percent = round(confidence / 5 * 100, 1)
+        score = academic * 0.6 + interview_percent * 0.4
+
+    score = round(score)
+    label = (
+        "Strong preparation" if score >= 75
+        else "Building momentum" if score >= 55
+        else "Start with the fundamentals"
+    )
+    return {
+        "score": score,
+        "academic_percent": round(academic, 1),
+        "interview_percent": interview_percent,
+        "provisional": interview_percent is None,
+        "label": label,
+    }
+
 def cluster_students(df, k=3):
     """KMeans on each student's subject-wise average -> Strong / Average / Needs Support."""
     d = df.copy()
@@ -256,6 +281,236 @@ def ai_questions(subject, topic, n=3):
         raise ValueError("AI response contains incomplete questions or an invalid correct option.")
     df["subject"], df["topic"] = subject, topic
     return df
+
+
+# ---------------- PLACEMENT INTERVIEW PREP ----------------
+INTERVIEW_ROLES = [
+    "Software Engineer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Data Analyst",
+]
+INTERVIEW_FORMATS = ["Technical", "HR / Behavioral", "Mixed"]
+
+_HR_INTERVIEW_QUESTIONS = [
+    {
+        "category": "Introduction",
+        "question": "Tell me about yourself and what you are looking for in your first role.",
+        "sample_answer": (
+            "A clear 60-90 second answer connects your current studies, one relevant project, "
+            "a strength supported by evidence, and why this role is your next step. Personalize "
+            "the details rather than memorizing a script."
+        ),
+        "evaluation_criteria": "A concise introduction, relevant evidence, and a clear link to the role.",
+    },
+    {
+        "category": "Behavioral",
+        "question": "Tell me about a difficult problem you solved with a team.",
+        "sample_answer": (
+            "Use STAR: briefly describe the situation and your responsibility, explain the "
+            "specific actions you took with the team, and finish with a measurable result and "
+            "what you learned."
+        ),
+        "evaluation_criteria": "A specific example, clear personal contribution, teamwork, and an outcome.",
+    },
+    {
+        "category": "Behavioral",
+        "question": "Describe a time you received critical feedback. What did you do with it?",
+        "sample_answer": (
+            "Choose a real example. Explain the feedback without becoming defensive, the change "
+            "you made, and how you checked whether that change improved your work."
+        ),
+        "evaluation_criteria": "Ownership, openness to learning, concrete action, and reflection.",
+    },
+    {
+        "category": "Motivation",
+        "question": "Why are you interested in this role, and what would you bring to the team?",
+        "sample_answer": (
+            "Connect a genuine interest in the role to one relevant project or skill. Name a "
+            "specific way you can contribute while being honest about what you are still learning."
+        ),
+        "evaluation_criteria": "Role-specific motivation, relevant evidence, and realistic self-awareness.",
+    },
+    {
+        "category": "Behavioral",
+        "question": "How do you prioritize when you have several deadlines at the same time?",
+        "sample_answer": (
+            "Explain how you compare urgency, impact, and dependencies, then communicate trade-offs "
+            "early. Give a real example and describe how you checked that the important work was completed."
+        ),
+        "evaluation_criteria": "A practical prioritization method, proactive communication, and an example.",
+    },
+]
+
+_TECHNICAL_INTERVIEW_QUESTIONS = {
+    "Software Engineer": [
+        ("How would you explain the difference between a stack and a queue, and when would you use each?",
+         "A stack is last-in, first-out and suits undo history or function calls. A queue is first-in, first-out and suits task scheduling or breadth-first search. I would choose based on the order the problem needs to process items.",
+         "Accurate LIFO/FIFO definitions, examples, and a reason for the choice."),
+        ("What is the time complexity of binary search, and what condition must the input meet?",
+         "Binary search takes O(log n) time because it removes half the remaining search space each step. The input must be ordered, and the data structure must support efficient access to the middle element.",
+         "Correct complexity, halving explanation, and the sorted-input requirement."),
+        ("How do you approach debugging a bug you cannot reproduce consistently?",
+         "I would gather the exact environment and inputs, inspect logs and telemetry, look for patterns, and add targeted instrumentation. Then I would form and test one hypothesis at a time, write a regression test, and verify the fix under the conditions that triggered the issue.",
+         "A repeatable investigation, evidence-based hypotheses, and regression prevention."),
+        ("What makes a useful automated test? Give an example from a project.",
+         "A useful test checks one observable behavior with controlled inputs and a clear expected result. For example, a unit test for a validation function can cover a valid value, a boundary case, and invalid input without depending on a live database.",
+         "Specific behavior, meaningful assertions, isolated setup, and edge cases."),
+        ("What is the difference between a process and a thread?",
+         "A process has its own address space and operating-system resources. Threads run within a process and share its memory, so they can communicate efficiently but require care around synchronization and shared state.",
+         "Separate address spaces versus shared process memory, with a trade-off or example."),
+    ],
+    "Frontend Developer": [
+        ("How would you make a form accessible to keyboard and screen-reader users?",
+         "I would use semantic form controls, visible labels associated with inputs, logical keyboard order, clear focus states, and accessible error messages linked to their fields. I would test the flow with a keyboard and an accessibility checker.",
+         "Semantic controls, labels, keyboard/focus support, and accessible validation."),
+        ("What is the difference between client-side and server-side validation?",
+         "Client-side validation gives users fast feedback, but it can be bypassed. Server-side validation is authoritative and must enforce the rules before accepting data. A robust form uses both and keeps the rules consistent.",
+         "Correct distinction, security awareness, and a consistent user experience."),
+        ("How would you investigate a page that is slow to render?",
+         "I would measure first with browser performance tools, identify whether the bottleneck is JavaScript, rendering, network, or assets, and then address the biggest measured cost. I would re-measure and check that the change did not harm accessibility or behavior.",
+         "Measurement before changes, a clear diagnostic process, and re-testing."),
+        ("How do you keep a user interface usable on small screens?",
+         "I would use responsive layouts, flexible sizing, readable typography, touch-sized controls, and content that reflows rather than requiring horizontal scrolling. I would test at narrow widths and with zoom, not just rely on a desktop preview.",
+         "Responsive reflow, touch usability, readable content, and testing."),
+        ("When would you use local component state versus shared application state?",
+         "I would keep state local when only one component or a small subtree needs it. I would move it to a shared store or context when unrelated parts of the app need the same state, while keeping the source of truth clear.",
+         "Scope state to its consumers and avoid unnecessary global state."),
+    ],
+    "Backend Developer": [
+        ("What is the difference between authentication and authorization?",
+         "Authentication establishes who a user is; authorization decides what that authenticated user may do. For example, signing in verifies identity, while a role or policy check decides whether the user can view a particular record.",
+         "Correct distinction and a relevant example."),
+        ("How would you design an API endpoint that creates a new resource?",
+         "I would define the resource schema and validation, use an appropriate HTTP method such as POST, require authorization, return a clear status and representation, and consider duplicate requests, logging, and tests for success and failure cases.",
+         "Validation, HTTP semantics, access control, response behavior, and tests."),
+        ("Why use a database transaction, and when would you need one?",
+         "A transaction groups related database changes so they commit together or roll back together. I would use one when a business operation changes multiple related records and partial completion would leave inconsistent data.",
+         "Atomicity, consistency, and a concrete multi-step example."),
+        ("How would you investigate an API endpoint with high latency?",
+         "I would inspect latency metrics and traces to locate time spent in the application, database, and external services. Then I would verify the suspected cause with query plans or profiling, make a targeted change, and compare measurements under similar load.",
+         "Observability, evidence-driven diagnosis, targeted fixes, and measured verification."),
+        ("What is an index in a relational database, and what is its trade-off?",
+         "An index is an auxiliary structure that can speed up lookups and sorting for selected columns. It uses storage and adds work to inserts, updates, and deletes, so I would choose indexes based on real query patterns.",
+         "Lookup benefit, storage/write cost, and query-driven selection."),
+    ],
+    "Data Analyst": [
+        ("How would you explain the difference between an inner join and a left join?",
+         "An inner join returns rows that match in both tables. A left join keeps every row from the left table and adds matching right-table values where available, leaving nulls when there is no match.",
+         "Correct outputs and treatment of unmatched rows."),
+        ("How would you handle missing values before analyzing a dataset?",
+         "I would first measure where values are missing and investigate why. Depending on the meaning and amount of missingness, I might correct the source, exclude a justified subset, or impute values, documenting the choice and checking how it affects conclusions.",
+         "Diagnose first, select a justified method, document assumptions, and assess impact."),
+        ("What is the difference between correlation and causation?",
+         "Correlation measures how two variables move together; it does not prove that one causes the other. Confounding factors, reverse effects, or coincidence may explain the relationship. Causal claims need an appropriate experimental or causal-inference design.",
+         "Correct definition and at least one reason correlation does not prove causation."),
+        ("How would you present an unexpected result to a non-technical stakeholder?",
+         "I would lead with the finding and its practical implication, show a clear visual with the right comparison, explain the data and assumptions in plain language, and be explicit about uncertainty and next steps.",
+         "Audience-aware communication, transparent assumptions, and an actionable next step."),
+        ("How would you check whether a dashboard metric is misleading?",
+         "I would verify its definition and source, check filters, time windows, missing values, and denominators, and compare it with an independent calculation. I would document the assumptions and ask stakeholders whether the metric matches the decision they need to make.",
+         "Metric definition, data quality, independent validation, and decision context."),
+    ],
+}
+
+def interview_question_bank(role, interview_format, n=5):
+    """Return curated placement interview questions and coaching guides."""
+    if role not in INTERVIEW_ROLES:
+        raise ValueError(f"Unsupported interview role: {role}.")
+    if interview_format not in INTERVIEW_FORMATS:
+        raise ValueError(f"Unsupported interview format: {interview_format}.")
+    if n < 1:
+        raise ValueError("The interview must contain at least one question.")
+
+    questions = []
+    if interview_format in ("HR / Behavioral", "Mixed"):
+        questions.extend(_HR_INTERVIEW_QUESTIONS)
+    if interview_format in ("Technical", "Mixed"):
+        questions.extend(
+            {
+                "category": "Technical",
+                "question": question,
+                "sample_answer": sample_answer,
+                "evaluation_criteria": evaluation_criteria,
+            }
+            for question, sample_answer, evaluation_criteria
+            in _TECHNICAL_INTERVIEW_QUESTIONS[role]
+        )
+    if interview_format == "Mixed":
+        questions = questions[::2] + questions[1::2]
+    if n > len(questions):
+        raise ValueError(f"Only {len(questions)} curated questions are available for this interview format.")
+    return questions[:n]
+
+def ai_is_configured():
+    """Whether an Anthropic API key is available for optional AI features."""
+    return bool(os.getenv("ANTHROPIC_API_KEY"))
+
+def ai_interview_questions(role, interview_format, n=5):
+    """Generate interview questions with answer guides; None means AI is not configured."""
+    key = os.getenv("ANTHROPIC_API_KEY")
+    if not key:
+        return None
+    import anthropic
+
+    client = anthropic.Anthropic(api_key=key)
+    prompt = (
+        f"Create exactly {n} original placement-interview questions for a student applying "
+        f"for a {role} role. Interview format: {interview_format}. Return ONLY a JSON list. "
+        "Each item must contain category, question, sample_answer, and evaluation_criteria. "
+        "For behavioral questions, the sample answer should be a coaching structure, not a fabricated "
+        "personal story. Keep answers accurate, concise, and suitable for a student or new graduate."
+    )
+    model = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-5")
+    response = client.messages.create(
+        model=model,
+        max_tokens=3500,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    text = response.content[0].text.strip()
+    if text.startswith("```"):
+        text = text.split("\n", 1)[-1].rsplit("```", 1)[0].strip()
+    questions = json.loads(text)
+    if not isinstance(questions, list) or len(questions) != n:
+        raise ValueError(f"AI response must contain exactly {n} interview questions.")
+    required = ["category", "question", "sample_answer", "evaluation_criteria"]
+    result = []
+    for item in questions:
+        if not isinstance(item, dict) or any(
+            not isinstance(item.get(field), str) or not item[field].strip()
+            for field in required
+        ):
+            raise ValueError("AI response contains a question with missing coaching details.")
+        result.append({field: item[field].strip() for field in required})
+    return result
+
+def ai_interview_feedback(role, question, answer, evaluation_criteria):
+    """Give concise interview coaching; None means AI is not configured."""
+    key = os.getenv("ANTHROPIC_API_KEY")
+    if not key:
+        return None
+    if not answer.strip():
+        raise ValueError("An interview answer is required for feedback.")
+    if len(answer) > 4000:
+        raise ValueError("Interview answers for AI feedback must be 4,000 characters or fewer.")
+    import anthropic
+
+    client = anthropic.Anthropic(api_key=key)
+    prompt = (
+        f"Give constructive placement-interview coaching for a student applying for {role}.\n"
+        f"Question: {question}\n"
+        f"Candidate answer: {answer}\n"
+        f"Evaluation criteria: {evaluation_criteria}\n"
+        "Respond in three short sections: What worked, One improvement, Try saying it this way. "
+        "Do not invent experience or facts; encourage the candidate to use truthful examples."
+    )
+    model = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-5")
+    response = client.messages.create(
+        model=model,
+        max_tokens=700,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    return response.content[0].text.strip()
 
 def save_practice_result(sid, subject, topic, correct, total):
     with conn() as c:
