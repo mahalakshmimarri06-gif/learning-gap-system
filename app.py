@@ -77,7 +77,10 @@ if page == "Upload data":
     left, right = st.columns([1.25, 0.75], gap="large")
     with left, st.container(border=True):
         st.markdown("#### Import a score file")
-        st.caption("CSV columns: student_id, name, subject, topic, marks_obtained, max_marks, quiz_date")
+        st.caption(
+            "Required: student_id, name, subject, topic, marks_obtained, max_marks, quiz_date. "
+            "Optional student details: class, section, branch."
+        )
         uploaded = st.file_uploader("Choose CSV file", type=["csv"], label_visibility="collapsed")
         replace = st.checkbox("Replace current score data", value=False)
         if st.button("Import scores", type="primary", disabled=uploaded is None, use_container_width=True):
@@ -88,7 +91,7 @@ if page == "Upload data":
                 st.error(f"Could not import this file: {error}")
         st.download_button(
             "Download CSV template",
-            pd.DataFrame(columns=core.REQUIRED).to_csv(index=False),
+            pd.DataFrame(columns=core.REQUIRED + core.STUDENT_DETAILS).to_csv(index=False),
             "learning_gap_template.csv",
             mime="text/csv",
             use_container_width=True,
@@ -102,6 +105,50 @@ if page == "Upload data":
             count = core.save_scores(pd.read_csv(ROOT / "data" / "sample_scores.csv"), replace=True)
             st.success(f"Loaded {count:,} sample score records.")
             st.rerun()
+
+    with st.container(border=True):
+        st.markdown("#### Student details")
+        st.caption("Add or update a learner's class, section, and branch. Score history is not changed.")
+        if students.empty:
+            st.info("Import a score file or load the sample cohort before adding student details.")
+        else:
+            details_by_student = students.set_index("student_id")
+            detail_sid = st.selectbox(
+                "Student",
+                students.student_id.tolist(),
+                format_func=lambda student_id: (
+                    f"{student_id} · {details_by_student.loc[student_id, 'name']}"
+                ),
+                key="student_details_selector",
+            )
+            detail_record = details_by_student.loc[detail_sid]
+            with st.form("student_details_form"):
+                detail_columns = st.columns(3)
+                with detail_columns[0]:
+                    student_class = st.text_input(
+                        "Class",
+                        value="" if pd.isna(detail_record["class"]) else str(detail_record["class"]),
+                        placeholder="e.g. 2nd Year",
+                    )
+                with detail_columns[1]:
+                    section = st.text_input(
+                        "Section",
+                        value="" if pd.isna(detail_record["section"]) else str(detail_record["section"]),
+                        placeholder="e.g. A",
+                    )
+                with detail_columns[2]:
+                    branch = st.text_input(
+                        "Branch",
+                        value="" if pd.isna(detail_record["branch"]) else str(detail_record["branch"]),
+                        placeholder="e.g. Computer Science",
+                    )
+                if st.form_submit_button("Save student details", type="primary"):
+                    try:
+                        core.update_student_details(detail_sid, student_class, section, branch)
+                    except Exception as error:
+                        st.error(f"Could not update student details: {error}")
+                    else:
+                        st.success(f"Updated details for {detail_record['name']}.")
 
     st.markdown('<div class="section-heading"><div><span class="eyebrow">LATEST IMPORT</span><h2>Score records</h2></div></div>', unsafe_allow_html=True)
     existing = core.all_scores()
@@ -118,6 +165,7 @@ elif page == "Student dashboard":
     sid = pick_student()
     df = core.student_scores(sid)
     name = str(df.name.iloc[0])
+    student_record = students.loc[students.student_id == sid].iloc[0]
     topics = core.topic_performance(df)
     subjects = core.subject_performance(df)
     trend_label, trend_delta = core.trend(df)
@@ -127,6 +175,16 @@ elif page == "Student dashboard":
     average = subjects.percent.mean()
 
     page_header("LEARNER PROFILE", name, f"{sid} · Individual progress and practical next steps")
+    profile_details = [
+        ("Class", student_record["class"]),
+        ("Section", student_record["section"]),
+        ("Branch", student_record["branch"]),
+    ]
+    detail_badges = "".join(
+        f'<span><strong>{label}</strong>{escape(str(value)) if pd.notna(value) and str(value).strip() else "Not set"}</span>'
+        for label, value in profile_details
+    )
+    st.markdown(f'<div class="student-meta">{detail_badges}</div>', unsafe_allow_html=True)
     top = st.columns(4)
     top[0].metric("Average", f"{average:.1f}%")
     top[1].metric("Weak topics", len(weak))
@@ -216,42 +274,116 @@ elif page == "Practice":
     with control_right:
         st.markdown(f'<div class="practice-context"><span>{escape(subject)}</span><strong>{escape(topic)}</strong><small>Recent average · {selected.percent:.1f}%</small></div>', unsafe_allow_html=True)
 
-    key = f"q_{sid}_{subject}_{topic}_{use_ai}"
-    new_questions = st.button("Refresh questions", icon="🔄")
-    if key not in st.session_state or new_questions:
+    base_key = f"practice_{sid}_{subject}_{topic}_{use_ai}"
+    revision_key = f"{base_key}_revision"
+    if revision_key not in st.session_state:
+        st.session_state[revision_key] = 0
+    if st.button("Refresh questions", icon="🔄"):
+        st.session_state[revision_key] += 1
+
+    key = f"{base_key}_{st.session_state[revision_key]}"
+    if key not in st.session_state:
         questions = core.bank_questions(subject, topic, 5)
         if use_ai:
-            generated = core.ai_questions(subject, topic, 3)
-            if generated is not None:
-                questions = pd.concat([questions, generated], ignore_index=True)
+            try:
+                generated = core.ai_questions(subject, topic, 5)
+            except Exception as error:
+                st.error(
+                    f"AI question generation failed ({type(error).__name__}). "
+                    "Built-in questions are available instead."
+                )
             else:
-                st.info("AI questions aren’t available right now. The built-in question bank is ready instead.")
+                if generated is not None:
+                    questions = pd.concat([questions, generated], ignore_index=True)
+                else:
+                    st.info("Set ANTHROPIC_API_KEY to enable AI-generated questions. Built-in questions are ready.")
         st.session_state[key] = questions.reset_index(drop=True)
+        st.session_state[f"{key}_page"] = 0
 
     questions = st.session_state[key]
     if questions.empty:
         st.warning("There are no practice questions for this topic yet.")
         st.stop()
 
-    answers = {}
-    for index, question in questions.iterrows():
+    questions_per_page = 5
+    total_pages = (len(questions) + questions_per_page - 1) // questions_per_page
+    page_key = f"{key}_page"
+    current_page = min(st.session_state[page_key], total_pages - 1)
+    st.session_state[page_key] = current_page
+    first_question = current_page * questions_per_page
+    last_question = min(first_question + questions_per_page, len(questions))
+    result_key = f"{key}_result"
+    st.caption(f"Page {current_page + 1} of {total_pages} · Questions {first_question + 1}–{last_question} of {len(questions)}")
+
+    for index in range(first_question, last_question):
+        question = questions.iloc[index]
         with st.container(border=True):
             st.markdown(f'<div class="question-label">QUESTION {index + 1:02}</div>', unsafe_allow_html=True)
             st.markdown(f"**{question.question}**")
             options = {"A": question.option_a, "B": question.option_b, "C": question.option_c, "D": question.option_d}
-            answers[index] = st.radio(
+            st.radio(
                 f"Answer {index + 1}", list(options),
                 format_func=lambda option, values=options: f"{option}  {values[option]}",
-                key=f"{key}_{index}", index=None, label_visibility="collapsed",
+                key=f"{key}_answer_{index}", index=None, label_visibility="collapsed",
+                disabled=result_key in st.session_state,
             )
 
-    if st.button("Submit answers", type="primary", icon=":material/check:"):
-        correct = sum(answers[index] == question.correct_option for index, question in questions.iterrows())
-        core.save_practice_result(sid, subject, topic, correct, len(questions))
-        st.success(f"Practice complete · {correct} of {len(questions)} correct. Your progress report has been updated.")
+    navigation_left, navigation_right = st.columns(2)
+    with navigation_left:
+        if st.button("← Previous", disabled=current_page == 0, key=f"{key}_previous"):
+            st.session_state[page_key] -= 1
+            st.rerun()
+    with navigation_right:
+        if st.button("Next →", disabled=current_page == total_pages - 1, key=f"{key}_next"):
+            st.session_state[page_key] += 1
+            st.rerun()
+
+    if st.button(
+        "Submit quiz", type="primary", icon=":material/check:", key=f"{key}_submit",
+        disabled=result_key in st.session_state,
+    ):
+        submitted_answers = {
+            index: st.session_state.get(f"{key}_answer_{index}")
+            for index in range(len(questions))
+        }
+        unanswered = [index + 1 for index, answer in submitted_answers.items() if answer is None]
+        if unanswered:
+            st.warning(
+                f"Answer every question before submitting. Unanswered question(s): "
+                f"{', '.join(map(str, unanswered))}."
+            )
+        else:
+            correct = sum(
+                submitted_answers[index] == question.correct_option
+                for index, question in questions.iterrows()
+            )
+            core.save_practice_result(sid, subject, topic, correct, len(questions))
+            st.session_state[result_key] = {
+                "correct": correct,
+                "answers": submitted_answers,
+            }
+
+    if result_key in st.session_state:
+        result = st.session_state[result_key]
+        st.success(
+            f"Practice complete · {result['correct']} of {len(questions)} correct. "
+            "Your progress report has been updated."
+        )
+        st.markdown("#### Answer review")
         for index, question in questions.iterrows():
-            state = "Correct" if answers[index] == question.correct_option else f"Review · answer {question.correct_option}"
-            st.write(f"Question {index + 1}: {state}")
+            options = {"A": question.option_a, "B": question.option_b, "C": question.option_c, "D": question.option_d}
+            correct_option = question.correct_option
+            correct_answer = options[correct_option]
+            chosen = result["answers"][index]
+            if chosen == correct_option:
+                st.markdown(f"**Question {index + 1}: Correct**")
+            else:
+                st.markdown(f"**Question {index + 1}: Review this one**")
+                st.write(f"Your answer: {chosen} · {options[chosen]}")
+            st.write(f"Correct answer: {correct_option} · {correct_answer}")
+            explanation = question.get("explanation")
+            if isinstance(explanation, str) and explanation.strip():
+                st.caption(explanation)
 
 elif page == "Class overview":
     scores = core.all_scores()
@@ -259,7 +391,11 @@ elif page == "Class overview":
         st.warning("No learner data found. Load sample data or import a CSV to continue.")
         st.stop()
 
-    groups = core.cluster_students(scores)
+    groups = core.cluster_students(scores).merge(
+        core.students_list()[["student_id", "class", "section", "branch"]],
+        on="student_id",
+        how="left",
+    )
     topic_summary = core.topic_performance(scores)
     needs_support = groups[groups.group == "Needs Support"]
     page_header("FACULTY VIEW", "Class overview", "Spot shared learning gaps and see which learners may benefit from timely support.")
@@ -290,18 +426,41 @@ elif page == "Class overview":
         st.plotly_chart(polish_chart(hard_fig, 300), use_container_width=True, config={"displayModeBar": False})
 
     st.markdown('<div class="section-heading"><div><span class="eyebrow">FOLLOW-UP</span><h2>Learner support list</h2></div></div>', unsafe_allow_html=True)
-    filter_left, filter_right = st.columns([1, 2])
-    selected_group = filter_left.selectbox("Performance group", ["All groups", *sorted(groups.group.unique())])
-    search = filter_right.text_input("Find a learner", placeholder="Search by name or ID")
+    filter_group, filter_class, filter_section, filter_branch, filter_search = st.columns([1.1, 0.9, 0.8, 1.2, 1.5])
+    selected_group = filter_group.selectbox("Performance group", ["All groups", *sorted(groups.group.unique())])
+    class_options = sorted(groups["class"].dropna().astype(str).loc[lambda values: values.str.strip() != ""].unique())
+    section_options = sorted(groups.section.dropna().astype(str).loc[lambda values: values.str.strip() != ""].unique())
+    branch_options = sorted(groups.branch.dropna().astype(str).loc[lambda values: values.str.strip() != ""].unique())
+    selected_class = filter_class.selectbox("Class", ["All classes", *class_options])
+    selected_section = filter_section.selectbox("Section", ["All sections", *section_options])
+    selected_branch = filter_branch.selectbox("Branch", ["All branches", *branch_options])
+    search = filter_search.text_input("Find a learner", placeholder="Name or ID")
     table = groups.copy()
     if selected_group != "All groups":
         table = table[table.group == selected_group]
+    if selected_class != "All classes":
+        table = table[table["class"] == selected_class]
+    if selected_section != "All sections":
+        table = table[table.section == selected_section]
+    if selected_branch != "All branches":
+        table = table[table.branch == selected_branch]
     if search:
-        table = table[table.name.str.contains(search, case=False, na=False) | table.student_id.str.contains(search, case=False, na=False)]
-    table = table[["student_id", "name", "group", "overall"]].sort_values("overall")
+        matches = pd.Series(False, index=table.index)
+        for column in ["name", "student_id", "class", "section", "branch"]:
+            matches |= table[column].fillna("").astype(str).str.contains(search, case=False, regex=False)
+        table = table[matches]
+    table = table[
+        ["student_id", "name", "class", "section", "branch", "group", "overall"]
+    ].sort_values("overall")
     st.dataframe(
         table,
         use_container_width=True,
         hide_index=True,
-        column_config={"overall": st.column_config.NumberColumn("Overall", format="%.1f%%")},
+        column_config={
+            "student_id": st.column_config.TextColumn("Student ID"),
+            "class": st.column_config.TextColumn("Class"),
+            "section": st.column_config.TextColumn("Section"),
+            "branch": st.column_config.TextColumn("Branch"),
+            "overall": st.column_config.NumberColumn("Overall", format="%.1f%%"),
+        },
     )

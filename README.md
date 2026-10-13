@@ -27,17 +27,18 @@
 
 ## Data Format
 
-CSV uploads need these columns:
+CSV uploads require these columns. `class`, `section`, and `branch` are optional learner details:
 
 ```text
-student_id,name,subject,topic,marks_obtained,max_marks,quiz_date
+student_id,name,subject,topic,marks_obtained,max_marks,quiz_date,class,section,branch
 ```
 
-For example: `CS001,Ananya,DBMS,Normalization,8,10,2026-09-12`.
+For example: `CS001,Ananya,DBMS,Normalization,8,10,2026-09-12,2nd Year,A,Computer Science`.
+You can also add or update these details from **Upload data → Student details**. They appear on the student dashboard and in the searchable, filterable class roster. Older CSV files remain valid, and details are stored per student.
 
 ## Optional AI Questions
 
-Set `ANTHROPIC_API_KEY` in your environment to enable AI-generated questions in the Practice page. This is opt-in; without a key, the built-in question bank continues to work. The AI prompt includes the selected subject and topic, not the student's name or score history.
+Set `ANTHROPIC_API_KEY` in your environment and enable **Add newly generated AI questions** on the Practice page to add five AI-generated questions, with correct answers and explanations. Without a key, built-in questions continue to work. Practice questions are shown five per page; after submitting the complete quiz, the answer review identifies missed questions and shows the correct answer and any available explanation. The AI prompt includes the selected subject and topic, not the student's name or score history.
 
 ## Data and Methods
 
