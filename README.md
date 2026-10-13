@@ -14,7 +14,7 @@
 2. Open **Upload data** and select **Load sample data** for a cohort of 40 students across four engineering subjects.
 3. Open **Student dashboard** and switch learners to see a progress profile, learning trend, topic priorities, and matched resources.
 4. Open **Practice**, answer questions for a suggested topic, and submit. The new result is saved and reflected in the learner report.
-5. Open **Placement Dashboard** for a preparation indicator, priority skill gaps, a personalized action plan, and achievement badges.
+5. Open **Placement Dashboard** for a preparation indicator, learning trajectory, subject scores compared with the cohort, a topic-balance chart, priority skill gaps, a personalized action plan, and achievement badges. Use the quick actions to jump straight into practice or a mock interview.
 6. Open **Placement Prep** to practice a technical, HR/behavioral, or mixed mock interview for a target role, write answers, reflect on confidence, and review coaching notes.
 7. Open **Class overview** to review performance groups, challenging topics, and the learner support list.
 
@@ -50,7 +50,7 @@ The **Placement Prep** page offers technical, HR/behavioral, and mixed interview
 
 ## Placement Readiness Dashboard
 
-The **Placement Dashboard** brings academic mastery, priority topics, interview confidence, student-profile completion, and achievement badges into one personalized view. Its preparation score is a transparent learning signal: academic mastery alone before a mock interview, then 60% academic mastery plus 40% of self-rated interview confidence after practice. It is not a placement probability or hiring prediction. Interview history and badges use the current browser session and are not written to academic scores or the database.
+The **Placement Dashboard** brings academic mastery, dated learning progress, a comparison against the imported cohort's subject averages, topic-balance insights, interview confidence, student-profile completion, and achievement badges into one personalized view. Its preparation score is a transparent learning signal: academic mastery alone before a mock interview, then 60% academic mastery plus 40% of self-rated interview confidence after practice. It is not a placement probability or hiring prediction. Cohort comparisons use all imported score records; interview history and badges use the current browser session and are not written to academic scores or the database.
 
 ## Data and Methods
 

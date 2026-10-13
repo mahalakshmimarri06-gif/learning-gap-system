@@ -4,6 +4,7 @@ from uuid import uuid4
 
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import streamlit as st
 
 import core
@@ -19,9 +20,10 @@ core.init_db()
 core.load_reference_data()
 
 
-def page_header(kicker, title, description):
+def page_header(kicker, title, description, variant=None):
+    header_class = "page-header career-header" if variant == "career" else "page-header"
     st.markdown(
-        f'<div class="page-header"><div class="eyebrow">{escape(kicker)}</div>'
+        f'<div class="{header_class}"><div class="eyebrow">{escape(kicker)}</div>'
         f'<h1>{escape(title)}</h1><p>{escape(description)}</p></div>',
         unsafe_allow_html=True,
     )
@@ -34,12 +36,16 @@ def polish_chart(fig, height=340):
         margin={"l": 12, "r": 12, "t": 42, "b": 12},
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
-        font={"family": "DM Sans, sans-serif", "color": "#647168", "size": 12},
+        font={"family": "DM Sans, sans-serif", "color": "#617387", "size": 13},
         legend={"orientation": "h", "y": -0.22, "title": {"text": ""}},
     )
-    fig.update_xaxes(showgrid=True, gridcolor="#e9eee9", zeroline=False, title=None)
-    fig.update_yaxes(showgrid=False, zeroline=False, title=None)
+    fig.update_xaxes(showgrid=True, gridcolor="#e7edf2", zeroline=False, title=None, automargin=True)
+    fig.update_yaxes(showgrid=False, zeroline=False, title=None, automargin=True)
     return fig
+
+
+def navigate_to(page_name):
+    st.session_state["workspace_page"] = page_name
 
 
 students = core.students_list()
@@ -60,7 +66,13 @@ with st.sidebar:
         unsafe_allow_html=True,
     )
     st.markdown('<div class="sidebar-label">WORKSPACE</div>', unsafe_allow_html=True)
-    page = st.radio("Workspace", page_names, index=page_names.index(default_page), label_visibility="collapsed")
+    page = st.radio(
+        "Workspace",
+        page_names,
+        index=page_names.index(default_page),
+        label_visibility="collapsed",
+        key="workspace_page",
+    )
     st.markdown('<div class="sidebar-spacer"></div>', unsafe_allow_html=True)
     st.markdown('<div class="sidebar-label">LEARNER DATA</div>', unsafe_allow_html=True)
     st.markdown(f'<div class="sidebar-count"><strong>{len(students):02}</strong><span>students in view</span></div>', unsafe_allow_html=True)
@@ -267,6 +279,33 @@ elif page == "Placement Dashboard":
     subject_summary = core.subject_performance(learner_scores)
     academic_average = float(subject_summary.percent.mean()) if not subject_summary.empty else 0.0
     focus_topics = topic_summary[topic_summary.level != "Strong"].sort_values("percent")
+    cohort_scores = core.all_scores()
+    if not cohort_scores.empty:
+        cohort_scores["percent"] = (
+            cohort_scores.marks_obtained / cohort_scores.max_marks * 100
+        )
+        cohort_subjects = (
+            cohort_scores.groupby("subject", as_index=False).percent.mean()
+            .rename(columns={"percent": "Cohort average"})
+        )
+    else:
+        cohort_subjects = pd.DataFrame(columns=["subject", "Cohort average"])
+    subject_comparison = subject_summary[["subject", "percent"]].rename(
+        columns={"percent": "Your average"}
+    ).merge(cohort_subjects, on="subject", how="left")
+
+    dated_scores = learner_scores.copy()
+    dated_scores["quiz_date"] = pd.to_datetime(dated_scores.quiz_date, errors="coerce")
+    dated_scores = dated_scores.dropna(subset=["quiz_date"]).copy()
+    if not dated_scores.empty:
+        dated_scores["percent"] = (
+            dated_scores.marks_obtained / dated_scores.max_marks * 100
+        )
+        learning_trajectory = (
+            dated_scores.groupby(["quiz_date", "subject"], as_index=False).percent.mean()
+        )
+    else:
+        learning_trajectory = pd.DataFrame(columns=["quiz_date", "subject", "percent"])
 
     interview_history = st.session_state.get(f"placement_interview_history_{sid}", [])
     interview_ratings = [
@@ -289,13 +328,43 @@ elif page == "Placement Dashboard":
         "CAREER READINESS",
         "Your placement dashboard",
         "Turn learning progress into a focused placement-preparation plan. Your readiness score is a study guide, not a hiring prediction.",
+        variant="career",
     )
 
-    score_column, status_column = st.columns([1, 1.4], gap="large")
+    score_column, status_column = st.columns([1, 1.5], gap="large")
     with score_column, st.container(border=True):
         st.markdown("#### Placement readiness")
-        st.metric("Preparation score", f"{readiness['score']} / 100", readiness["label"])
-        st.progress(readiness["score"] / 100)
+        readiness_gauge = go.Figure(
+            go.Indicator(
+                mode="gauge+number",
+                value=readiness["score"],
+                number={"suffix": "", "font": {"size": 44, "color": "#192b3b"}},
+                title={"text": "PREPARATION SCORE", "font": {"size": 12, "color": "#617387"}},
+                gauge={
+                    "axis": {"range": [0, 100], "tickvals": [], "tickwidth": 0},
+                    "bar": {"color": "#168c83", "thickness": 0.28},
+                    "bgcolor": "#eef3f6",
+                    "borderwidth": 0,
+                    "steps": [
+                        {"range": [0, 40], "color": "#f8e8e3"},
+                        {"range": [40, 60], "color": "#fbf2dc"},
+                        {"range": [60, 100], "color": "#e2f2ed"},
+                    ],
+                    "threshold": {
+                        "line": {"color": "#142b40", "width": 3},
+                        "thickness": 0.8,
+                        "value": readiness["score"],
+                    },
+                },
+            )
+        )
+        readiness_gauge.update_layout(
+            height=205,
+            margin={"l": 12, "r": 12, "t": 42, "b": 4},
+            paper_bgcolor="rgba(0,0,0,0)",
+        )
+        st.plotly_chart(readiness_gauge, use_container_width=True, config={"displayModeBar": False})
+        st.markdown(f"**{escape(str(readiness['label']))}** · Preparation score out of 100")
         if readiness["provisional"]:
             st.caption(
                 "Provisional score: currently based on academic mastery. Complete a mock interview "
@@ -309,13 +378,23 @@ elif page == "Placement Dashboard":
 
     with status_column, st.container(border=True):
         st.markdown("#### Your preparation snapshot")
-        component_columns = st.columns(3)
-        component_columns[0].metric("Academic mastery", f"{academic_average:.1f}%")
-        component_columns[1].metric(
-            "Interview confidence",
-            f"{average_interview_confidence:.1f} / 5" if average_interview_confidence is not None else "Not started",
-        )
-        component_columns[2].metric("Student profile", f"{profile_completion}%")
+        component_columns = st.columns(2)
+        snapshot_metrics = [
+            ("Academic mastery", f"{academic_average:.1f}%"),
+            (
+                "Interview confidence",
+                f"{average_interview_confidence:.1f} / 5"
+                if average_interview_confidence is not None
+                else "Not started",
+            ),
+        ]
+        for column, (label, value) in zip(component_columns, snapshot_metrics):
+            column.markdown(
+                f'<div class="snapshot-metric"><span>{escape(label)}</span>'
+                f'<strong>{escape(value)}</strong></div>',
+                unsafe_allow_html=True,
+            )
+        st.progress(profile_completion / 100, text=f"Student profile · {profile_completion}% complete")
         st.caption(
             f"{learner['name']} · {learner['class'] or 'Class not set'} · "
             f"Section {learner['section'] or 'not set'} · {learner['branch'] or 'Branch not set'}"
@@ -325,6 +404,23 @@ elif page == "Placement Dashboard":
     overview_columns[0].metric("Skill gaps to work on", f"{len(focus_topics)}")
     overview_columns[1].metric("Strong topics", f"{int((topic_summary.level == 'Strong').sum())}")
     overview_columns[2].metric("Mock interviews", f"{len(interview_history)}")
+    action_buttons = st.columns([1, 1, 2])
+    action_buttons[0].button(
+        "Practice a priority topic",
+        key="dashboard_practice_button",
+        on_click=navigate_to,
+        args=("Practice",),
+        type="primary",
+        use_container_width=True,
+        disabled=focus_topics.empty,
+    )
+    action_buttons[1].button(
+        "Start mock interview",
+        key="dashboard_interview_button",
+        on_click=navigate_to,
+        args=("Placement Prep",),
+        use_container_width=True,
+    )
 
     st.markdown(
         '<div class="section-heading"><div><span class="eyebrow">YOUR ROADMAP</span>'
@@ -425,26 +521,121 @@ elif page == "Placement Dashboard":
             unsafe_allow_html=True,
         )
 
-    progress_left, progress_right = st.columns([1.2, 0.8], gap="large")
-    with progress_left, st.container(border=True):
-        st.markdown("#### Skill map")
-        st.caption("Subject-level averages from your saved quiz results.")
-        subject_chart = px.bar(
-            subject_summary.sort_values("percent"),
-            x="percent",
-            y="subject",
-            orientation="h",
-            range_x=[0, 100],
-            color="percent",
-            color_continuous_scale=[[0, "#d96b54"], [0.6, "#d6a13e"], [1, "#3c8064"]],
-            text="percent",
-        )
-        subject_chart.update_traces(texttemplate="%{text:.0f}%", textposition="outside", cliponaxis=False)
-        subject_chart.update_coloraxes(showscale=False)
-        st.plotly_chart(polish_chart(subject_chart, 300), use_container_width=True, config={"displayModeBar": False})
+    st.markdown(
+        '<div class="section-heading"><div><span class="eyebrow">PERFORMANCE INSIGHTS</span>'
+        '<h2>See what is changing</h2></div></div>',
+        unsafe_allow_html=True,
+    )
+    trend_column, comparison_column = st.columns(2, gap="large")
+    with trend_column, st.container(border=True):
+        st.markdown("#### Learning trajectory")
+        st.caption("Average quiz score by subject and date. Use this to spot momentum, not as a prediction.")
+        if learning_trajectory.empty:
+            st.info("Add dated quiz results to see a learning trajectory.")
+        else:
+            trajectory_chart = px.line(
+                learning_trajectory,
+                x="quiz_date",
+                y="percent",
+                color="subject",
+                markers=True,
+                range_y=[0, 100],
+                color_discrete_sequence=["#168c83", "#e1a947", "#5877b7", "#d36a54", "#8a68ad"],
+            )
+            trajectory_chart.update_traces(line={"width": 3}, marker={"size": 8})
+            trajectory_chart.update_xaxes(tickformat="%b %d")
+            trajectory_chart.update_yaxes(ticksuffix="%", rangemode="tozero")
+            st.plotly_chart(
+                polish_chart(trajectory_chart, 330),
+                use_container_width=True,
+                config={"displayModeBar": False},
+            )
+    with comparison_column, st.container(border=True):
+        st.markdown("#### Your scores vs cohort")
+        st.caption("Subject averages compared with all imported learner score records.")
+        if subject_comparison.empty:
+            st.info("Add score records to compare subject performance.")
+        else:
+            comparison_chart = px.bar(
+                subject_comparison.melt(
+                    id_vars="subject",
+                    value_vars=["Your average", "Cohort average"],
+                    var_name="Learner group",
+                    value_name="Average score",
+                ),
+                x="Average score",
+                y="subject",
+                color="Learner group",
+                barmode="group",
+                range_x=[0, 100],
+                orientation="h",
+                color_discrete_map={"Your average": "#168c83", "Cohort average": "#b7c5d1"},
+                text="Average score",
+            )
+            comparison_chart.update_traces(
+                texttemplate="%{text:.0f}%",
+                textposition="outside",
+                cliponaxis=False,
+            )
+            comparison_chart.update_xaxes(ticksuffix="%")
+            st.plotly_chart(
+                polish_chart(comparison_chart, 330),
+                use_container_width=True,
+                config={"displayModeBar": False},
+            )
 
-    with progress_right, st.container(border=True):
+    analysis_columns = st.columns([0.85, 1.15], gap="large")
+    with analysis_columns[0], st.container(border=True):
+        st.markdown("#### Topic balance")
+        st.caption("How your tracked topics are currently distributed.")
+        if topic_summary.empty:
+            st.info("Add topic-level quiz results to see your skill mix.")
+        else:
+            level_counts = (
+                topic_summary.level.value_counts()
+                .reindex(["Strong", "Needs Practice", "Weak"], fill_value=0)
+                .rename_axis("Level")
+                .reset_index(name="Topics")
+            )
+            balance_chart = px.pie(
+                level_counts,
+                names="Level",
+                values="Topics",
+                hole=0.68,
+                color="Level",
+                color_discrete_map={
+                    "Strong": "#3c8064",
+                    "Needs Practice": "#d6a13e",
+                    "Weak": "#d96b54",
+                },
+            )
+            balance_chart.update_traces(
+                textinfo="value",
+                textfont={"size": 15, "color": "#192b3b"},
+                hovertemplate="%{label}: %{value} topics<extra></extra>",
+            )
+            balance_chart.add_annotation(
+                text=f"{len(topic_summary)}<br>topics",
+                x=0.5,
+                y=0.5,
+                showarrow=False,
+                font={"size": 20, "color": "#192b3b"},
+            )
+            balance_chart.update_layout(
+                height=290,
+                margin={"l": 6, "r": 6, "t": 12, "b": 12},
+                paper_bgcolor="rgba(0,0,0,0)",
+                legend={"orientation": "h", "y": -0.12},
+                font={"family": "DM Sans, sans-serif", "color": "#617387", "size": 12},
+            )
+            st.plotly_chart(
+                balance_chart,
+                use_container_width=True,
+                config={"displayModeBar": False},
+            )
+    with analysis_columns[1], st.container(border=True):
         st.markdown("#### Priority topics")
+        st.caption("The lowest-scoring topics are surfaced first so the next step is clear.")
         if focus_topics.empty:
             st.success("No priority gaps right now. Keep practicing to maintain your progress.")
         else:
